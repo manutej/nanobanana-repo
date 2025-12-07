@@ -158,7 +158,7 @@ nanobanana-repo/
 
 ### GitHub Clone (Standard)
 ```bash
-git clone https://github.com/YOUR_USERNAME/nanobanana-repo.git
+git clone https://github.com/manutej/nanobanana-repo.git
 cd nanobanana-repo
 python -m venv venv
 source venv/bin/activate
@@ -171,7 +171,7 @@ python examples/generate_context_engineering_pro.py
 ### Claude Code Plugin
 ```bash
 mkdir -p ~/.claude/plugins
-git clone https://github.com/YOUR_USERNAME/nanobanana-repo.git ~/.claude/plugins/nanobanana
+git clone https://github.com/manutej/nanobanana-repo.git ~/.claude/plugins/nanobanana
 cd ~/.claude/plugins/nanobanana
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
@@ -188,7 +188,7 @@ cp .env.example .env
 Before publication, the user must complete:
 
 1. **Update Repository URLs**
-   - Replace `YOUR_USERNAME` placeholders in:
+   - Replace `manutej` placeholders in:
      - `README.md` (line 29)
      - `PLUGIN-README.md` (line 45)
      - `claude-plugin.json` (repository field)
@@ -270,7 +270,7 @@ These are documented in `docs/DOCUMENTATION-AUDIT.md` but **not required** for p
 - **Google Gemini API Docs**: https://ai.google.dev/
 - **Get API Key**: https://aistudio.google.com/app/apikey
 - **Claude Code Docs**: https://docs.claude.com/en/docs/claude-code
-- **Issue Tracker**: https://github.com/YOUR_USERNAME/nanobanana-repo/issues
+- **Issue Tracker**: https://github.com/manutej/nanobanana-repo/issues
 
 ---
 
@@ -281,7 +281,7 @@ These are documented in `docs/DOCUMENTATION-AUDIT.md` but **not required** for p
 **Remaining work**: User must update repository URLs, revoke exposed API keys, and generate fresh credentials.
 
 **Recommended Next Steps**:
-1. Update `YOUR_USERNAME` placeholders
+1. Update `manutej` placeholders
 2. Revoke 3 exposed API keys
 3. Generate fresh API key
 4. Make repository public

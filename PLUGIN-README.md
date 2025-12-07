@@ -24,7 +24,7 @@ Generate technical diagrams, abstract visualizations, and professional visual co
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/nanobanana-repo.git
+git clone https://github.com/manutej/nanobanana-repo.git
 cd nanobanana-repo
 
 # Setup environment
@@ -48,7 +48,7 @@ python examples/generate_context_engineering_pro.py
 
 # Or manually
 mkdir -p ~/.claude/plugins
-git clone https://github.com/YOUR_USERNAME/nanobanana-repo.git ~/.claude/plugins/nanobanana
+git clone https://github.com/manutej/nanobanana-repo.git ~/.claude/plugins/nanobanana
 cd ~/.claude/plugins/nanobanana
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
@@ -303,8 +303,8 @@ MIT License - See LICENSE file for details
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/nanobanana-repo/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/YOUR_USERNAME/nanobanana-repo/discussions)
+- **Issues**: [GitHub Issues](https://github.com/manutej/nanobanana-repo/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/manutej/nanobanana-repo/discussions)
 - **Documentation**: See `docs/` directory
 
 ---

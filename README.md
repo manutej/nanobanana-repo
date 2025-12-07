@@ -26,7 +26,7 @@ Generate technical diagrams, abstract visualizations, and professional visual co
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/nanobanana-repo.git
+git clone https://github.com/manutej/nanobanana-repo.git
 cd nanobanana-repo
 
 # Setup environment
@@ -134,7 +134,7 @@ Install as native Claude Code plugin:
 
 ```bash
 mkdir -p ~/.claude/plugins
-git clone https://github.com/YOUR_USERNAME/nanobanana-repo.git ~/.claude/plugins/nanobanana
+git clone https://github.com/manutej/nanobanana-repo.git ~/.claude/plugins/nanobanana
 cd ~/.claude/plugins/nanobanana
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
