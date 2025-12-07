@@ -1,0 +1,22 @@
+{
+  "examples": [
+    {
+      "id": 5,
+      "name": "microservices_diagram",
+      "filename": "05_microservices_diagram.png",
+      "description": "Technical architecture diagram with color-coded components",
+      "original_prompt": "Cloud-native microservices architecture for image generation API with Cloud Run, Firestore, and Cloud Storage",
+      "enhanced_prompt": "Cloud-native microservices architecture for image generation API with Cloud Run, Firestore, and Cloud Storage, enterprise-grade cloud-native architecture diagram following AWS Well-Architected Framework, professional visual style matching AWS/GCP official documentation standards, color-coded layers (blue=#0066CC for API Gateway/ingress, green=#00AA00 for microservices tier, orange=#FF9900 for data persistence, red=#CC0000 for caching, gray=#666666 for external integrations), clear hierarchical layout with proper grouping (VPC boundaries, availability zones, security groups), labeled bidirectional arrows showing data flow with protocol annotations (HTTPS, gRPC, message queue), includes load balancers, auto-scaling groups, managed services icons (RDS, ElastiCache, S3), security annotations (IAM roles, encryption at rest/transit), clean professional aesthetic with subtle gradients and shadows for depth",
+      "domain": "diagrams",
+      "subcategory": "architecture",
+      "quality": "expert",
+      "confidence": 0.6666666666666666,
+      "file_size_mb": 1.11,
+      "model": "flash",
+      "generated_at": "2025-12-07T18:19:58.082572"
+    }
+  ],
+  "total_count": 1,
+  "generated_at": "2025-12-07T18:20:40.957986",
+  "total_cost_usd": 0.039
+}
