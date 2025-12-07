@@ -1,504 +1,192 @@
 # 🍌 NanoBanana
 
-**Professional-quality images from simple prompts**
+**Production-ready AI image generation powered by Gemini Pro**
 
-Turn `"headshot of CEO"` into award-winning corporate portraits with 400+ tokens of expert specifications—automatically.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Success Rate](https://img.shields.io/badge/success%20rate-100%25-brightgreen.svg)](docs/CONTEXT-ENGINEERING-PIPELINE-TEST.md)
 
-[![Success Rate](https://img.shields.io/badge/Success_Rate-100%25-success)](examples/)
-[![Cost](https://img.shields.io/badge/Cost-$0.039/image-blue)](docs/TECHNICAL-LEARNINGS.md)
-[![Examples](https://img.shields.io/badge/Examples-15_Generated-purple)](examples/images/)
-[![Model](https://img.shields.io/badge/Model-Gemini_Flash-orange)](https://ai.google.dev/gemini-api)
-
----
-
-## 🚀 What It Does
-
-```
-User: "professional headshot of a CEO"
-         ↓
-NanoBanana: [domain classification] → photography/portrait
-         ↓
-NanoBanana: [template enhancement] → +400 tokens of pro specs
-         ↓
-Gemini API: [image generation] → 3.5 seconds
-         ↓
-Output: award-winning corporate portrait, Phase One XF IQ4 150MP,
-        Schneider Kreuznach 110mm f/2.8 LS, professional three-point
-        studio lighting, Fibonacci composition, ultra-high resolution
-```
-
-**Result**: Professional, consistent, high-quality images—every time. No photography expertise required!
+Generate technical diagrams, abstract visualizations, and professional visual content with state-of-the-art quality and perfect text rendering.
 
 ---
 
-## ✨ Key Features
+## ✨ Features
 
-| Feature | Description | Benefit |
-|---------|-------------|---------|
-| 🎯 **Auto Domain Classification** | Detects photography, diagrams, art, products | Applies correct template automatically |
-| 📝 **Template Enhancement** | Adds 400+ tokens of expert specs | 15 words → 93 words (6x enhancement) |
-| 💰 **Cost-Effective** | $0.039 per Flash image | 62% cheaper than alternatives |
-| ⚡ **Fast** | 3.5 seconds per image | Production-ready performance |
-| ✅ **Reliable** | 100% success rate (15/15 examples) | Battle-tested and validated |
-| 🎨 **Quality Tiers** | basic, detailed, expert | Flexibility for every use case |
-
----
-
-## 📸 Examples
-
-### Basic Examples (1-10)
-
-| Example | Domain | Size | Preview |
-|---------|--------|------|---------|
-| Corporate Portrait | photography/portrait | 1.39 MB | Professional CEO headshot |
-| Mountain Sunset | photography/landscape | 1.69 MB | Golden hour landscape |
-| Kubernetes Architecture | diagrams/architecture | 1.08 MB | Cloud-native diagram |
-| OAuth Flowchart | diagrams/flowchart | 0.91 MB | BPMN process flow |
-| Cyberpunk Street | art/digital_art | 2.08 MB | Neon-lit scene |
-
-**→ [View complete gallery](examples/README.md)** (10 basic + 5 advanced examples)
+- 🎯 **100% Success Rate** - Validated async batch processing
+- 💎 **Pro Model Quality** - Perfect text rendering, 4K resolution
+- ⚡ **Fast & Efficient** - Smart concurrency control, zero rate limits
+- 🎨 **Dual Quality Tiers** - Flash ($0.039) for prototyping, Pro ($0.12) for production
+- 📚 **Pre-Built Libraries** - 18 production-ready example images included
+- 🔄 **Meta-Prompting** - Iterative refinement for perfect results
+- 🛡️ **Secure by Default** - API keys protected, pre-commit hooks
 
 ---
 
-## 🏗️ Architecture
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                        User Request                          │
-│              "Generate a headshot of a CEO"                  │
-└────────────────────────────┬────────────────────────────────┘
-                             ↓
-┌────────────────────────────────────────────────────────────┐
-│              DOMAIN CLASSIFIER                              │
-│  Keyword Matching → 4 Domains (photo/diagram/art/product)  │
-│  Output: domain="photography", confidence=1.00             │
-└────────────────────────────┬───────────────────────────────┘
-                             ↓
-┌────────────────────────────────────────────────────────────┐
-│              TEMPLATE ENGINE                                │
-│  48 Templates (4 domains × 4 subcategories × 3 tiers)      │
-│  Selects: photography/portrait/expert                       │
-│  Enhancement: 15 words → 93 words (+400 tokens)            │
-└────────────────────────────┬───────────────────────────────┘
-                             ↓
-┌────────────────────────────────────────────────────────────┐
-│              GEMINI API CLIENT                              │
-│  HTTP POST → gemini-2.5-flash-image:generateContent        │
-│  Multi-Part Response Handling (text + inlineData)          │
-│  Retry Logic: 3 attempts with exponential backoff          │
-└────────────────────────────┬───────────────────────────────┘
-                             ↓
-┌────────────────────────────────────────────────────────────┐
-│              RESPONSE                                        │
-│  Base64 PNG (1-2 MB) → Saved to examples/images/           │
-│  Cost: $0.039 | Time: 3.5s | Quality: Professional         │
-└────────────────────────────────────────────────────────────┘
-```
-
-**Total Code**: ~500 lines of Python | **Dependencies**: httpx, Flask, asyncio
-
----
-
-## ⚡ Quick Start
-
-### 1. Install Dependencies
+## 🚀 Quick Start
 
 ```bash
+# Clone repository
+git clone https://github.com/YOUR_USERNAME/nanobanana-repo.git
+cd nanobanana-repo
+
+# Setup environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
+
+# Configure API key
+cp .env.example .env
+# Edit .env and add your GOOGLE_API_KEY from https://aistudio.google.com/app/apikey
+
+# Test with Pro model
+python examples/generate_context_engineering_pro.py
 ```
 
-### 2. Set API Key
-
-```bash
-export GOOGLE_API_KEY="your-api-key-here"
-```
-
-### 3. Run Server
-
-```bash
-cd src && python main.py
-```
-
-### 4. Generate Image
-
-```bash
-curl -X POST http://localhost:8080/generate \
-  -H "Content-Type: application/json" \
-  -d '{"prompt": "professional headshot of a CEO"}'
-```
-
-**Output**:
-```json
-{
-  "image": "data:image/png;base64,iVBORw0KGgo...",
-  "enhanced_prompt": "professional headshot of a CEO, award-winning...",
-  "domain": "photography",
-  "subcategory": "portrait",
-  "cost_usd": 0.039
-}
-```
+**Result**: 10 production-quality technical diagrams in `examples/Context Engineering Pro/`
 
 ---
 
-## 🎯 Use Cases
+## 📖 Usage
 
-### Photography
-- ✅ Corporate portraits with Phase One specs
-- ✅ Landscape photography with HDR techniques
-- ✅ Product shots with studio lighting
-- ✅ Lifestyle scenes with natural light
-
-### Diagrams
-- ✅ AWS/GCP architecture diagrams
-- ✅ BPMN process flowcharts
-- ✅ UX wireframes with Material Design
-- ✅ Technical sequence diagrams
-
-### Art
-- ✅ Digital paintings (cyberpunk, surrealist)
-- ✅ 3D renders with PBR materials
-- ✅ Abstract compositions
-- ✅ Mixed media collages
-
-### Products
-- ✅ E-commerce catalog shots
-- ✅ Editorial product photography
-- ✅ Lifestyle product scenes
-- ✅ Technical product diagrams
-
----
-
-## 📊 Performance
-
-| Metric | Value | Benchmark |
-|--------|-------|-----------|
-| **Success Rate** | 100% (15/15) | ✅ Production-ready |
-| **Avg Generation Time** | 3.5s | ⚡ Fast |
-| **Avg File Size** | 1.4 MB | 📦 High-resolution PNG |
-| **Cost per Image (Flash)** | $0.039 | 💰 Cost-effective |
-| **Cost per Image (Pro)** | $0.069 | 💎 Premium quality |
-| **Domain Classification** | 93% confidence | 🎯 Accurate |
-
----
-
-## 🏛️ Architecture Philosophy
-
-### **Intelligent Modular Monolith** (MERCURIO + MARS Validated)
-
-**Decision**: MAINTAIN monolithic architecture with intelligence enhancements
-**Confidence**: 91% (independent expert convergence)
-**Status**: L2-L3 maturity → L5-L6 target (4 weeks)
-
-```
-┌──────────────────────────────────────────────────────┐
-│  CURRENT: Simple Monolith (100% success rate)        │
-│  TARGET: Intelligent Monolith (98% accuracy, 77% cost reduction)  │
-│  FUTURE: Conditional microservices (when triggers met) │
-└──────────────────────────────────────────────────────┘
-```
-
-### Why Monolithic?
-
-**The Insight**: Our challenge is **intelligence scaling** (vague → professional quality), NOT infrastructure scaling. Cloud Run handles 25x current volume with auto-scaling.
-
-| Factor | Monolith | Microservices | Winner |
-|--------|----------|---------------|--------|
-| **Cost** | $410/month | $1,075/month | 🍌 Monolith |
-| **Ops Burden** | 5 hrs/week | 23 hrs/week | 🍌 Monolith |
-| **Team Size** | 1-2 engineers | 3+ engineers | 🍌 Monolith |
-| **Dev Velocity** | 2-3 days/feature | 1 week/feature | 🍌 Monolith |
-| **Current Scale** | 10K/month (25x headroom) | Overkill | 🍌 Monolith |
-
-**Savings**: $7,080/year + 18 hours/week operational overhead
-
-### Evolution Strategy
-
-**Phase 1** (Weeks 1-2): Add LLM enhancement + caching
-- 98% accuracy (vs 93%)
-- 30% cost reduction via caching
-- $1,344/year savings
-
-**Phase 2** (Weeks 3-6): Multi-model routing
-- 77% cost reduction ($0.044 → $0.010)
-- Support Flash/Pro/Imagen
-- $5,928/year savings (**234% ROI**)
-
-**Phase 3** (6+ months): Conditional decomposition
-- **ONLY if** 2+ triggers met:
-  - Volume >50K/month
-  - Team >3 engineers
-  - Deploy frequency >5/week
-  - Latency P95 >10s
-
-**Current Triggers**: 0/6 ✅ Stay monolithic
-
-> *"Earn complexity through necessity, not anticipation."*
-> — MERCURIO + MARS Consensus (91% confidence)
-
-**📄 Full Analysis**: [Architecture Decision Record](docs/ARCHITECTURE-DECISION-RECORD.md) | [Executive Summary](docs/EXECUTIVE-SUMMARY.md)
-
----
-
-## 💡 How It Works
-
-### Domain Classification
-
-Keyword matching across 4 domains:
+### Single Image
 
 ```python
-DOMAIN_KEYWORDS = {
-    "photography": ["photo", "portrait", "headshot", "landscape"],
-    "diagrams": ["diagram", "chart", "architecture", "flowchart"],
-    "art": ["painting", "artwork", "digital art", "impressionist"],
-    "products": ["product", "e-commerce", "listing", "catalog"]
-}
+import asyncio
+from src.gemini_client import GeminiClient
+
+async def main():
+    async with GeminiClient() as client:
+        result = await client.generate_image(
+            "Technical diagram showing 3-tier architecture with labeled components",
+            model="pro"  # or "flash" for faster/cheaper
+        )
+
+        with open("output.png", "wb") as f:
+            f.write(result["image_data"])
+
+asyncio.run(main())
 ```
 
-Returns domain + confidence score (0.0-1.0)
+### Batch Generation
 
-### Template Enhancement
-
-**Input**: `"headshot of a CEO"` (4 words)
-
-**Output**: 
-```
-"headshot of a CEO, award-winning professional corporate portrait,
-shot on Phase One XF IQ4 150MP, Schneider Kreuznach 110mm f/2.8 LS,
-ISO 64, professional three-point studio lighting with key light at
-45 degrees, fill light camera left, rim light for separation, backdrop
-in neutral gray (18% gray card matched), composition following Fibonacci
-spiral, sharp focus on eyes with catchlights, extremely shallow depth
-of field (f/2.8), professional color grading with skin tone correction,
-high-resolution detail capture"
-```
-(93 words, +400 tokens)
-
-**Enhancement Ratio**: 6.2x
-
-### Multi-Part Response Handling ⚠️
-
-**CRITICAL FIX**: Gemini API returns multi-part responses!
-
-```json
-{
-  "parts": [
-    {"text": "Here's your professional headshot: "},
-    {"inlineData": {"mimeType": "image/png", "data": "..."}}
-  ]
-}
-```
-
-**Must iterate to find inlineData**:
 ```python
-for part in parts:
-    if "inlineData" in part:
-        image_b64 = part["inlineData"]["data"]
-        break
-```
+from examples.simple_batch import generate_batch_streaming
 
-This fix improved success rate from 10% → 100%!
+prompts = [
+    "Flowchart showing decision tree with 5 steps",
+    "Bar chart comparing metrics before and after optimization",
+    "System architecture diagram with client, API, and database tiers"
+]
 
----
-
-## 📁 Project Structure
-
-```
-nanobanana-repo/
-├── src/
-│   ├── main.py                 # Flask API (4 endpoints)
-│   ├── domain_classifier.py    # Keyword matching
-│   ├── template_engine.py      # Prompt enhancement
-│   └── gemini_client.py        # HTTP wrapper + multi-part handling
-├── templates/
-│   └── templates.json          # 48 templates (4×4×3)
-├── examples/
-│   ├── images/                 # 15 generated examples
-│   ├── generate_examples.py    # Basic generation script
-│   ├── generate_advanced.py    # Advanced generation script
-│   └── README.md              # Examples gallery
-├── docs/
-│   └── TECHNICAL-LEARNINGS.md  # Detailed documentation
-├── .env.example                # Template for API key
-├── requirements.txt            # Python dependencies
-├── Dockerfile                  # Container config
-└── deploy.sh                   # Cloud Run deployment
+async for result in generate_batch_streaming(prompts, max_concurrent=5):
+    if result["status"] == "success":
+        print(f"✓ Generated {result['size_mb']:.2f} MB image")
 ```
 
 ---
 
-## 🚢 Deployment
+## 🎨 Model Comparison
 
-### Cloud Run (Recommended)
+| Feature | Flash | Pro |
+|---------|-------|-----|
+| **Cost** | $0.039 | $0.12 |
+| **Speed** | Fast (5-10s) | Medium (10-20s) |
+| **Text Accuracy** | 70-80% | **~100%** ✅ |
+| **Best For** | Prototyping | Production |
 
-```bash
-./deploy.sh
-```
-
-**Configuration**:
-- Memory: 512 Mi
-- CPU: 1
-- Max Instances: 10
-- Timeout: 60s
-- Cost: ~$410/month (10K images)
-
-### Cost Comparison
-
-| Infrastructure | Monthly Cost | Ops Burden |
-|----------------|--------------|------------|
-| **Cloud Run** (current) | $410 | ✅ Low (managed) |
-| Kubernetes | $1,075 | ❌ High (manual) |
-| **Savings** | **$665/month (62%)** | **90% less ops** |
-
----
-
-## 🔧 API Endpoints
-
-### `POST /generate`
-Generate image from text prompt
-
-**Request**:
-```json
-{
-  "prompt": "professional headshot of a CEO",
-  "quality": "expert",
-  "model": "flash"
-}
-```
-
-**Response**:
-```json
-{
-  "image": "data:image/png;base64,...",
-  "enhanced_prompt": "...",
-  "domain": "photography",
-  "subcategory": "portrait",
-  "metadata": {...}
-}
-```
-
-### `POST /classify`
-Classify prompt domain without generating
-
-### `POST /enhance`
-Enhance prompt without generating
-
-### `GET /health`
-Health check for Cloud Run
-
----
-
-## 📈 Roadmap
-
-### ✅ Week 1 (COMPLETE)
-- [x] Domain classifier
-- [x] Template engine
-- [x] Gemini API client
-- [x] Flask API
-- [x] 15 validated examples
-- [x] Multi-part response fix
-
-### 🔄 Week 2 (In Progress)
-- [ ] Firestore integration (user preferences)
-- [ ] Cost tracking (per-user budgets)
-- [ ] Cloud Storage caching
-- [ ] Better error handling
-
-### 🔜 Week 3 (Next)
-- [ ] Async processing (Cloud Tasks)
-- [ ] Webhook callbacks
-- [ ] Monitoring dashboard
-- [ ] Unit tests
-
-### 🎯 Week 4 (Launch)
-- [ ] Load testing (1000 req/s)
-- [ ] Performance optimization
-- [ ] Production launch
-- [ ] Documentation site
-
----
-
-## 🛠️ Development
-
-### Run Tests
-
-```bash
-pytest tests/  # (Coming soon)
-```
-
-### Generate Examples
-
-```bash
-# Basic examples (1-10)
-python examples/generate_examples.py
-
-# Advanced examples (11-15)
-python examples/generate_advanced.py
-```
-
-### Add New Template
-
-Edit `templates/templates.json`:
-
-```json
-{
-  "photography": {
-    "new_subcategory": {
-      "expert": "{subject}, professional specifications here..."
-    }
-  }
-}
-```
+**Get API Key**: [Google AI Studio](https://aistudio.google.com/app/apikey) (free tier available)
 
 ---
 
 ## 📚 Documentation
 
-- **[Technical Learnings](docs/TECHNICAL-LEARNINGS.md)** - Deep dive into multi-part response fix
-- **[Examples Gallery](examples/README.md)** - 15 generated examples with analysis
-- **[Advanced Examples](examples/ADVANCED-PROMPTS.md)** - High-complexity prompts
+| Document | Description |
+|----------|-------------|
+| **[PLUGIN-README.md](PLUGIN-README.md)** | Complete plugin guide (installation, examples, API) |
+| **[GEMINI-IMAGEN-MODELS.md](docs/research/GEMINI-IMAGEN-MODELS.md)** | Model comparison & best practices |
+| **[ASYNC-BATCH-BREAKTHROUGH.md](docs/ASYNC-BATCH-BREAKTHROUGH.md)** | Technical deep-dive on async pattern |
+| **[image-prompt-iterate.md](skills/image-prompt-iterate.md)** | Meta-prompting for iterative refinement |
+
+---
+
+## 🎯 Examples Included
+
+**Context Engineering** (10 diagrams - $1.20):
+- 7-Layer Context Stack
+- RAG 2.0 Pipeline
+- Memory Management Strategies
+- MCP Architecture
+- Security Layers
+
+**Symbolic Concepts** (8 visualizations - $0.96):
+- Fourier Transform Kinesthetics
+- Nanobot Regimen
+- Intelligence Through Crossing
+- Hybrid Intelligence
+
+**All images validated at 100% success rate** ✅
+
+---
+
+## 🔧 Claude Code Plugin
+
+Install as native Claude Code plugin:
+
+```bash
+mkdir -p ~/.claude/plugins
+git clone https://github.com/YOUR_USERNAME/nanobanana-repo.git ~/.claude/plugins/nanobanana
+cd ~/.claude/plugins/nanobanana
+python -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+# Add your GOOGLE_API_KEY to .env
+```
+
+See **[claude-plugin.json](claude-plugin.json)** for plugin manifest.
+
+---
+
+## 🛡️ Security
+
+- ✅ API keys stored in `.env` only (gitignored)
+- ✅ Pre-commit hooks prevent key exposure
+- ✅ Zero keys in code/docs
+- ✅ Security rules in [CLAUDE.md](CLAUDE.md)
+
+**Never commit your .env file!**
+
+---
+
+## 📊 Validated Performance
+
+- **18 images generated** (Context + Symbolic)
+- **100% success rate** across both test suites
+- **Zero rate limit errors**
+- **$2.16 total cost**
+- **Production-ready quality**
+
+See **[CONTEXT-ENGINEERING-PIPELINE-TEST.md](docs/CONTEXT-ENGINEERING-PIPELINE-TEST.md)** for full test report.
 
 ---
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
+Contributions welcome! See **[CONTRIBUTING.md](CONTRIBUTING.md)** for guidelines.
 
 ---
 
 ## 📜 License
 
-MIT License - See [LICENSE](LICENSE) for details
+MIT License - See **[LICENSE](LICENSE)** for details.
 
 ---
 
-## 🙏 Credits
+## 🙏 Acknowledgments
 
-- **API**: Google Gemini (`gemini-2.5-flash-image`)
-- **Design**: Jargon-free architecture, no unnecessary complexity
-- **Inspiration**: "Make simple things simple, complex things possible"
-
----
-
-## 💬 Support
-
-- 📧 Issues: [GitHub Issues](https://github.com/manutej/nanobanana-repo/issues)
-- 📖 Docs: [docs/](docs/)
-- 💡 Examples: [examples/](examples/)
+- Powered by [Google Gemini API](https://ai.google.dev/)
+- Async pattern inspired by comonadic extraction
+- Research via Context7 MCP
 
 ---
 
-<div align="center">
-
-**🍌 NanoBanana: From Vague Prompts to Professional Results**
-
-[![GitHub](https://img.shields.io/badge/GitHub-nanobanana--repo-181717?logo=github)](https://github.com/manutej/nanobanana-repo)
-[![Status](https://img.shields.io/badge/Status-Production--Ready-success)](.)
-[![Cost](https://img.shields.io/badge/Cost-$0.039/image-blue)](docs/TECHNICAL-LEARNINGS.md)
-
-*Turn simple descriptions into professional images—automatically.*
-
-</div>
+**Built for Claude Code users** | Generate production-quality images with ease! 🎨✨
