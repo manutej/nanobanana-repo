@@ -92,10 +92,14 @@ class GeminiClient:
         endpoint = f"{self.BASE_URL}/{model_id}:generateContent"
 
         # Request payload
+        # CRITICAL: Explicitly request IMAGE response to avoid text-only responses
         payload = {
             "contents": [{
                 "parts": [{"text": prompt}]
-            }]
+            }],
+            "generation_config": {
+                "responseModalities": ["IMAGE", "TEXT"]  # Force image generation
+            }
         }
 
         # Retry loop with exponential backoff
