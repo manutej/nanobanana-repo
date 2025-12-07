@@ -1,0 +1,135 @@
+{
+  "name": "nanobanana",
+  "displayName": "NanoBanana - AI Image Generation",
+  "version": "1.0.0",
+  "description": "Production-ready AI image generation with Gemini Pro. Generate technical diagrams, abstract concepts, and visual content through elegant async batch processing.",
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/nanobanana-repo"
+  },
+  "keywords": [
+    "image-generation",
+    "gemini",
+    "ai",
+    "diagrams",
+    "visualization",
+    "async",
+    "batch-processing"
+  ],
+  "capabilities": {
+    "imageGeneration": true,
+    "batchProcessing": true,
+    "asyncOperations": true,
+    "metaPrompting": true
+  },
+  "models": {
+    "flash": {
+      "id": "gemini-2.5-flash-image",
+      "cost": 0.039,
+      "speed": "fast",
+      "quality": "good"
+    },
+    "pro": {
+      "id": "gemini-3-pro-image-preview",
+      "cost": 0.12,
+      "speed": "medium",
+      "quality": "production"
+    }
+  },
+  "requirements": {
+    "python": ">=3.8",
+    "dependencies": [
+      "httpx",
+      "python-dotenv"
+    ],
+    "apiKey": {
+      "provider": "Google AI Studio",
+      "envVar": "GOOGLE_API_KEY",
+      "getKeyUrl": "https://aistudio.google.com/app/apikey",
+      "instructions": "Get free API key from Google AI Studio. Add to .env file (never commit .env)"
+    }
+  },
+  "installation": {
+    "steps": [
+      "Clone repository or install as Claude Code plugin",
+      "Run: python -m venv venv && source venv/bin/activate",
+      "Run: pip install -r requirements.txt",
+      "Copy .env.example to .env",
+      "Add your GOOGLE_API_KEY to .env",
+      "Test: python examples/generate_context_engineering_pro.py"
+    ]
+  },
+  "features": [
+    "Async batch image generation (100% success rate validated)",
+    "Flash model: $0.039/image, fast prototyping",
+    "Pro model: $0.12/image, production quality, perfect text rendering",
+    "Meta-prompting skill for iterative prompt refinement",
+    "Pre-built prompt libraries (Context Engineering, Symbolic Concepts)",
+    "Organized output directories",
+    "Zero rate-limiting with smart concurrency control"
+  ],
+  "useCases": [
+    "Technical diagram generation for presentations",
+    "Abstract concept visualization",
+    "Educational material illustration",
+    "Webinar and conference slides",
+    "Documentation diagrams",
+    "Research paper figures"
+  ],
+  "skills": [
+    {
+      "name": "image-prompt-iterate",
+      "path": "skills/image-prompt-iterate.md",
+      "description": "Meta-prompting for image generation - iterative prompt refinement",
+      "type": "meta-prompting"
+    }
+  ],
+  "examples": [
+    {
+      "name": "Context Engineering",
+      "path": "examples/generate_context_engineering_pro.py",
+      "description": "10 technical diagrams for LLM context engineering webinar"
+    },
+    {
+      "name": "Symbolic Concepts",
+      "path": "examples/generate_symbolic_concepts.py",
+      "description": "8 abstract visualizations (Fourier kinesthetics, nanobots, etc.)"
+    },
+    {
+      "name": "Simple Batch",
+      "path": "examples/simple_batch.py",
+      "description": "Elegant async batch processing pattern (~60 lines)"
+    }
+  ],
+  "documentation": [
+    {
+      "name": "README",
+      "path": "README.md",
+      "description": "Quick start and overview"
+    },
+    {
+      "name": "Gemini Models Guide",
+      "path": "docs/research/GEMINI-IMAGEN-MODELS.md",
+      "description": "Comprehensive model comparison and best practices"
+    },
+    {
+      "name": "Async Batch Breakthrough",
+      "path": "docs/ASYNC-BATCH-BREAKTHROUGH.md",
+      "description": "Technical deep-dive on async pattern"
+    },
+    {
+      "name": "Context Engineering Research",
+      "path": "docs/research/CONTEXT-ENGINEERING-RESEARCH.md",
+      "description": "Complete research on LLM context optimization"
+    }
+  ],
+  "security": {
+    "apiKeys": {
+      "storage": ".env file (gitignored)",
+      "validation": "Pre-commit hooks scan for accidental key exposure",
+      "documentation": "CLAUDE.md contains security rules"
+    }
+  }
+}
