@@ -112,8 +112,24 @@ class GeminiClient:
                 data = response.json()
 
                 # Extract image from response
-                image_b64 = data["candidates"][0]["content"]["parts"][0]["inlineData"]["data"]
-                mime_type = data["candidates"][0]["content"]["parts"][0]["inlineData"]["mimeType"]
+                # Note: API may return multiple parts (text + image)
+                # We need to find the part with inlineData
+                parts = data["candidates"][0]["content"]["parts"]
+
+                image_b64 = None
+                mime_type = None
+
+                for part in parts:
+                    if "inlineData" in part:
+                        image_b64 = part["inlineData"]["data"]
+                        mime_type = part["inlineData"]["mimeType"]
+                        break
+
+                if not image_b64:
+                    raise ValueError(
+                        f"No image data found in response. "
+                        f"API returned {len(parts)} parts but none contained inlineData"
+                    )
 
                 # Decode base64
                 image_bytes = base64.b64decode(image_b64)

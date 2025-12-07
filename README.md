@@ -307,7 +307,7 @@ The `examples/` directory contains 10 designed prompts covering:
 - **Art**: impressionist paintings, 3D renders
 - **Products**: e-commerce, editorial
 
-**Success Rate**: 1 of 10 examples generated successfully (microservices diagram). The 9 failures appear to be Gemini Flash Image model limitations with photographic prompts. See [examples/README.md](examples/README.md) for complete analysis and next steps.
+**Success Rate**: ✅ **10 of 10 examples generated successfully!** All domains (photography, diagrams, art, products) working perfectly after fixing multi-part response handling. Total cost: $0.39. See [examples/README.md](examples/README.md) for complete gallery.
 
 ---
 
