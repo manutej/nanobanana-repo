@@ -184,11 +184,13 @@ Google offers three primary image generation models via the Gemini API, each wit
 
 ---
 
-### 4. Gemini 2.0 Flash Image (Legacy Preview)
+### 4. Gemini 2.0 Flash Image (DEPRECATED - Legacy Preview)
 
 **Model ID**: `gemini-2.0-flash-preview-image-generation`
-**Status**: Preview (May 2025) - **Not recommended for new projects**
+**Status**: ⚠️ **DEPRECATED** - Use `gemini-2.5-flash-image` instead
 **Geographic Restrictions**: Not supported in many European, Middle Eastern, and African countries
+
+> **Migration Note**: This model is deprecated. New projects should use `gemini-2.5-flash-image` (Flash) or `gemini-3-pro-image-preview` (Pro) for production quality. The 2.0 model has lower token limits and reduced text rendering accuracy compared to current models.
 
 #### Key Specifications
 
