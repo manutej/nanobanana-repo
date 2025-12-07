@@ -1,0 +1,82 @@
+{
+  "examples": [
+    {
+      "id": 11,
+      "name": "food_photography",
+      "filename": "11_food_photography.png",
+      "description": "Cinematic food photography with motion and steam",
+      "original_prompt": "Gourmet pasta carbonara being twirled on a fork with steam rising, captured mid-action with dramatic side lighting and shallow depth of field, professional food photography for Michelin restaurant menu",
+      "enhanced_prompt": "Gourmet pasta carbonara being twirled on a fork with steam rising, captured mid-action with dramatic side lighting and shallow depth of field, professional food photography for Michelin restaurant menu, award-winning professional corporate portrait, shot on Phase One XF IQ4 150MP, Schneider Kreuznach 110mm f/2.8 LS, ISO 64, professional three-point studio lighting with key light at 45 degrees, fill light camera left, rim light for separation, backdrop in neutral gray (18% gray card matched), composition following Fibonacci spiral, sharp focus on eyes with catchlights, extremely shallow depth of field (f/2.8), professional color grading with skin tone correction, high-resolution detail capture",
+      "domain": "photography",
+      "subcategory": "portrait",
+      "quality": "expert",
+      "confidence": 0.75,
+      "file_size_mb": 1.32,
+      "model": "flash",
+      "generated_at": "2025-12-07T18:43:38.926214+00:00"
+    },
+    {
+      "id": 12,
+      "name": "kubernetes_gitops",
+      "filename": "12_kubernetes_gitops.png",
+      "description": "Complex K8s architecture with GitOps",
+      "original_prompt": "Kubernetes multi-cluster deployment architecture showing GitOps workflow with ArgoCD, Flux, and Helm, including staging and production environments, automated rollbacks, and progressive delivery",
+      "enhanced_prompt": "Kubernetes multi-cluster deployment architecture showing GitOps workflow with ArgoCD, Flux, and Helm, including staging and production environments, automated rollbacks, and progressive delivery, enterprise BPMN 2.0 compliant process flowchart, professional business process modeling notation with standard symbols (rounded rectangles for tasks, diamonds for gateways, circles for events), color-coded semantic meaning (green=#00AA00 for start events, blue=#0066CC for process tasks, yellow=#FFCC00 for decision gateways, orange=#FF9900 for service tasks, red=#CC0000 for end events, gray=#CCCCCC for subprocesses), horizontal swim lanes clearly labeled for different organizational roles/systems, directional arrows with clear labels indicating conditions and data flow, includes error handling paths and exception flows, annotations for SLA timing, decision criteria documented at each gateway, professional layout with consistent spacing and alignment",
+      "domain": "diagrams",
+      "subcategory": "flowchart",
+      "quality": "expert",
+      "confidence": 0.6666666666666666,
+      "file_size_mb": 1.12,
+      "model": "flash",
+      "generated_at": "2025-12-07T18:43:46.703315+00:00"
+    },
+    {
+      "id": 13,
+      "name": "brutalist_architecture",
+      "filename": "13_brutalist_architecture.png",
+      "description": "Architectural photography with geometric emphasis",
+      "original_prompt": "Brutalist concrete building photographed from low angle with strong geometric shapes and dramatic shadows, high-contrast black and white fine art architectural photography",
+      "enhanced_prompt": "Brutalist concrete building photographed from low angle with strong geometric shapes and dramatic shadows, high-contrast black and white fine art architectural photography, award-winning professional corporate portrait, shot on Phase One XF IQ4 150MP, Schneider Kreuznach 110mm f/2.8 LS, ISO 64, professional three-point studio lighting with key light at 45 degrees, fill light camera left, rim light for separation, backdrop in neutral gray (18% gray card matched), composition following Fibonacci spiral, sharp focus on eyes with catchlights, extremely shallow depth of field (f/2.8), professional color grading with skin tone correction, high-resolution detail capture",
+      "domain": "photography",
+      "subcategory": "portrait",
+      "quality": "expert",
+      "confidence": 0.5,
+      "file_size_mb": 1.49,
+      "model": "flash",
+      "generated_at": "2025-12-07T18:43:53.330254+00:00"
+    },
+    {
+      "id": 14,
+      "name": "event_driven_sequence",
+      "filename": "14_event_driven_sequence.png",
+      "description": "Complex sequence diagram with async messaging",
+      "original_prompt": "Event-driven microservices sequence diagram showing order placement flow with EventBridge, Order Service, Inventory Service, Payment Service, and Notification Service with retry logic and dead-letter queues",
+      "enhanced_prompt": "Event-driven microservices sequence diagram showing order placement flow with EventBridge, Order Service, Inventory Service, Payment Service, and Notification Service with retry logic and dead-letter queues, enterprise-grade cloud-native architecture diagram following AWS Well-Architected Framework, professional visual style matching AWS/GCP official documentation standards, color-coded layers (blue=#0066CC for API Gateway/ingress, green=#00AA00 for microservices tier, orange=#FF9900 for data persistence, red=#CC0000 for caching, gray=#666666 for external integrations), clear hierarchical layout with proper grouping (VPC boundaries, availability zones, security groups), labeled bidirectional arrows showing data flow with protocol annotations (HTTPS, gRPC, message queue), includes load balancers, auto-scaling groups, managed services icons (RDS, ElastiCache, S3), security annotations (IAM roles, encryption at rest/transit), clean professional aesthetic with subtle gradients and shadows for depth",
+      "domain": "diagrams",
+      "subcategory": "architecture",
+      "quality": "expert",
+      "confidence": 1.0,
+      "file_size_mb": 1.07,
+      "model": "flash",
+      "generated_at": "2025-12-07T18:44:01.671965+00:00"
+    },
+    {
+      "id": 15,
+      "name": "cyberpunk_street",
+      "filename": "15_cyberpunk_street.png",
+      "description": "Cinematic cyberpunk digital art",
+      "original_prompt": "Cyberpunk street scene at night with neon signs in Japanese and English, rain-slicked streets reflecting colorful lights, figure in hooded jacket, Blade Runner aesthetic, digital painting",
+      "enhanced_prompt": "Cyberpunk street scene at night with neon signs in Japanese and English, rain-slicked streets reflecting colorful lights, figure in hooded jacket, Blade Runner aesthetic, digital painting, masterwork impressionist oil painting in the style of Claude Monet's late Water Lilies series, visible expressive brushstrokes with impasto technique (thick paint application), vibrant complementary color palette (blues and oranges, purples and yellows), masterful play of natural light with emphasis on changing atmospheric conditions, broken color technique where colors mix optically on canvas rather than palette, loose gestural application capturing movement and fleeting moments, emphasis on overall impression and mood over photorealistic detail, professional canvas texture visible, color harmony balancing warm and cool tones, dynamic composition with asymmetric balance, artistic interpretation prioritizing emotional impact and atmospheric effects",
+      "domain": "art",
+      "subcategory": "painting",
+      "quality": "expert",
+      "confidence": 1.0,
+      "file_size_mb": 2.08,
+      "model": "flash",
+      "generated_at": "2025-12-07T18:44:09.169073+00:00"
+    }
+  ],
+  "total_count": 5,
+  "generated_at": "2025-12-07T18:44:09.169510+00:00",
+  "total_cost_usd": 0.195
+}
