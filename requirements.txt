@@ -1,0 +1,20 @@
+# NanoBanana Image Generation Service - Dependencies
+# Simple and minimal - no unnecessary packages!
+
+# Web framework
+Flask==3.0.0
+Werkzeug==3.0.1
+
+# HTTP client for Gemini API
+httpx==0.27.0
+
+# Google Cloud (for Firestore, Cloud Storage - optional for now)
+# google-cloud-firestore==2.14.0
+# google-cloud-storage==2.14.0
+
+# Production WSGI server
+gunicorn==21.2.0
+
+# Testing (optional)
+pytest==7.4.3
+pytest-asyncio==0.21.1
