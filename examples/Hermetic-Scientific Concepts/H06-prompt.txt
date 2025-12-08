@@ -1,0 +1,33 @@
+Create a computational-philosophical symbolic visualization titled "COMPUTATIONAL EQUIVALENCE TEACHER - Wolfram's Principle"
+
+Visual Elements:
+- Multiple computational systems side-by-side showing equivalent complexity:
+  - Rule 110 cellular automaton evolving
+  - Simple Turing machine computation
+  - Natural system (snowflake formation, shell pattern)
+  - Economic market dynamics
+  - Neural network learning
+  - Weather system evolution
+
+- Unified complexity horizon: all systems reaching same computational power
+- Emergence patterns: simple rules → complex behavior across all domains
+- Irreducibility visualization: no shortcuts - must run computation to see result
+- Class 4 behavior: edge of chaos where computation happens
+- Universal computation symbols (Turing completeness markers)
+
+Conceptual Layers:
+- Bottom: Elementary rules (simple, deterministic)
+- Middle: Evolutionary process (iteration, emergence)
+- Top: Computational equivalence (all equally complex)
+
+Color Palette:
+- Black and white cellular automata (stark rule-based dynamics)
+- Rainbow spectrum for different computational systems
+- Golden threads connecting equivalent systems
+- Fractal color gradients (self-similarity across scales)
+
+Style: Scientific data visualization meets philosophical diagram
+Mood: Profound equality - simple rules can match nature's complexity
+Composition: Grid-like comparison showing diverse systems unified by principle
+
+Teacher Concept: Wolfram's Principle of Computational Equivalence - nearly all processes that aren't obviously simple are of equivalent sophistication. Universe computes, mind computes, markets compute - all reaching same computational threshold. Irreducibility means: you must live the experiment.
