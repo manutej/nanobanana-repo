@@ -1,0 +1,38 @@
+Create a computational-philosophical symbolic visualization titled "COMPUTATIONAL EQUIVALENCE TEACHER - Universal Complexity"
+
+Wolfram's Principle: Nearly all non-trivial processes reach equivalent computational sophistication.
+
+Visual Elements:
+- Grid of 6 computational systems showing equivalent complexity:
+  1. Rule 110 cellular automaton (black/white evolving pattern)
+  2. Simple Turing machine tape
+  3. Natural pattern (snowflake crystal formation)
+  4. Economic market price chart
+  5. Neural network layers activating
+  6. Weather system turbulence
+
+- COMPLEXITY HORIZON: Horizontal line showing all systems reaching same level
+- Emergence arrows: Simple rules → Complex behavior in each system
+- Class 4 behavior marker: Edge of chaos where universal computation happens
+- Turing completeness symbols (❈) marking equivalent systems
+- Irreducibility visualization: Cannot shortcut - must run the computation
+- Simple starting rules shown for each system (minimal code)
+
+Conceptual Layers (Bottom to Top):
+- Elementary rules (deterministic, simple)
+- Iterative evolution (time steps, generations)
+- Emergent complexity (patterns appearing)
+- Computational equivalence plateau (all equally sophisticated)
+
+Color Palette:
+- Black and white cellular automata (stark computational clarity)
+- Rainbow spectrum differentiating systems
+- Golden threads connecting equivalent-complexity points
+- Fractal gradients (self-similarity across scales)
+- Blue computation glow at equivalence horizon
+
+Style: Scientific data visualization meets philosophical revelation
+Mood: Profound equality - simplicity reaches nature's sophistication
+Composition: Grid comparison unified by equivalence principle
+
+Teaching: Wolfram's insight - cellular automaton, markets, weather, brains: All reach same computational power. Universe is democratic in complexity.

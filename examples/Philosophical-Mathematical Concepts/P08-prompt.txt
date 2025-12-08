@@ -1,0 +1,47 @@
+Create a physics-biology symbolic visualization titled "QUARK MATTER & PORPHYRINS ELIXIR TEACHER"
+
+Bridging fundamental particles and life's master molecule - matter from quarks to biological function.
+
+Visual Elements:
+QUARK LEVEL (Microscopic foundation):
+- Three quarks forming proton/neutron
+- Quark colors: red, green, blue (color charge, not actual color)
+- Gluon exchange (strong force binding quarks)
+- Quantum chromodynamics field
+- Scale: 10^-15 meters
+
+ATOMIC LEVEL (Iron):
+- Iron-56 nucleus (26 protons, 30 neutrons)
+- Electron shells showing ferrous (Fe²⁺) state
+- Ferromagnetism indicating electron spin
+- Scale: 10^-10 meters
+
+MOLECULAR LEVEL (Porphyrin):
+- Iron at center of porphyrin ring (heme)
+- Tetrapyrrole coordination bonds to Fe²⁺
+- Oxygen molecule (O₂) binding site
+- Conjugated π-electron system
+- Scale: 10^-9 meters
+
+BIOLOGICAL FUNCTION:
+- Hemoglobin protein structure
+- Oxygen transport through bloodstream
+- Life process enabled by fundamental particles
+
+Connecting Threads:
+- Matter hierarchy: Quarks → Nucleons → Atoms → Molecules → Life
+- Energy scales decreasing upward
+- Complexity increasing upward
+- Quantum mechanics at base → Classical biology at top
+
+Color Palette:
+- Quark level: Quantum color (RGB chromodynamics)
+- Atomic: Metallic iron grays and oranges
+- Molecular: Deep crimson porphyrin
+- Biological: Blood red with oxygen blue
+
+Style: Multi-scale scientific visualization - matter building life
+Mood: Awe at continuity from fundamental particles to consciousness
+Composition: Vertical scale progression with connecting pathways
+
+Teaching: Life's elixir (porphyrin) is built from fundamental quark matter. From particle physics to breathing - unbroken chain of emergence.

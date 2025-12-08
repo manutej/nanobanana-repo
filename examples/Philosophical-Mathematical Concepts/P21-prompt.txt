@@ -1,0 +1,63 @@
+Create a mathematical-aesthetic symbolic visualization titled "1:1/Φ:Φ² - Golden Ratio Triad"
+
+The fundamental proportion 1 : 1/Φ : Φ² and its geometric/aesthetic significance.
+
+Visual Elements:
+- Three segments in golden proportion:
+  - Segment 1: Length = 1 (unity, baseline)
+  - Segment 2: Length = 1/Φ = 0.618... (golden reciprocal)
+  - Segment 3: Length = Φ² = 2.618... (golden square)
+
+- Visual relationship: 1/Φ + 1 = Φ and Φ + 1 = Φ²
+- Golden rectangle divisions showing this proportion
+- Pentagon with 1:1/Φ:Φ² appearing in sides/diagonals
+- Pentagram showing ALL ratios are golden
+
+GEOMETRIC DEMONSTRATIONS:
+- Rectangle: Width 1, Height Φ (golden rectangle)
+- Dividing creates: Square (1×1) + Rectangle (1/Φ × 1)
+- Extended rectangle: 1 + Φ = Φ² width
+- Spiral: Each turn grows by Φ factor
+- Nautilus chambers: 1, Φ, Φ², Φ³... progression
+
+Mathematical Properties:
+- Φ² = Φ + 1 = 2.618...
+- 1/Φ = Φ - 1 = 0.618...
+- Φ × 1/Φ = 1 (reciprocal identity)
+- 1 : 0.618 : 2.618 (fundamental triad)
+- Geometric mean: √(1 × Φ²) = Φ
+
+Aesthetic Applications:
+- Classical architecture: Parthenon proportions (1:1/Φ:Φ²)
+- Renaissance art: Canvas proportions, composition divisions
+- Musical harmony: Octave divisions approaching Φ ratios
+- Human body: Navel divides height in ~1:1/Φ ratio
+- Face: Eye-to-chin vs. top-to-eyes ≈ Φ ratio
+
+Natural Occurrences:
+- Flower petals: Counts follow Fibonacci (approaching Φ ratios)
+- Tree branches: Division points at 1/Φ proportion
+- Spiral galaxies: Arms at Φ angle spacing
+- DNA helix: Turn ratio related to Φ
+- Solar system: Planetary orbit ratios approximating Φ
+
+Visual Composition:
+- Three nested rectangles: 1, 1/Φ, Φ² widths
+- Golden spiral connecting proportion points
+- Pentagon/pentagram showing all three ratios
+- Musical staff with Φ-based intervals
+- Human form with proportion markers
+
+Color Palette:
+- Segment 1: Pure white (unity)
+- Segment 1/Φ: Sacred gold (0.618...)
+- Segment Φ²: Deep gold (2.618...)
+- Connecting lines: Mathematical blue
+- Background: Harmonic gradients
+- Aesthetic examples: Natural earth tones
+
+Style: Mathematical precision meets aesthetic perfection
+Mood: Harmony, proportion, beauty through mathematics
+Composition: Three segments in golden relationship, radiating into applications
+
+Teaching: 1:1/Φ:Φ² is THE fundamental proportion - appearing in pentagon, rectangle, spiral, nature, art, and music. Beauty has mathematical structure.

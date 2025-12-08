@@ -1,0 +1,38 @@
+Create a complexity science symbolic visualization titled "SIMPLE PROGRAMS, NATURAL COMPLEXITY TEACHER"
+
+How the simplest programs generate the complexity we see in nature.
+
+Visual Elements:
+- Minimal program code (< 5 lines) at top center
+- Explosion of complexity radiating outward from simple rule
+- Examples of complexity from simple rules:
+  - Cellular automaton Rule 30 (chaotic randomness from deterministic rule)
+  - Conway's Game of Life gliders and oscillators
+  - Fractal patterns (Mandelbrot set from z → z² + c)
+  - Shell patterns (cone snails following simple growth rules)
+  - Spiral galaxies from gravitational equations
+  - Snowflake branching from crystal lattice rules
+
+- IRREDUCIBILITY: Cannot predict outcome without running full computation
+- Emergence pathway: Rule → Iteration → Pattern → Complexity
+- Computational Universe concept: Nature runs simple programs
+- Self-organization from minimal instructions
+
+Visual Progression:
+- Center: Single simple rule (equation or algorithm)
+- First ring: Initial iterations (steps 1-10)
+- Middle ring: Pattern emergence (steps 100-1000)
+- Outer ring: Full complexity (natural-looking patterns)
+
+Color Palette:
+- Stark black/white for cellular automata
+- Natural colors for organic examples (shells, snowflakes)
+- Mathematical blue for fractals
+- Cosmic purples for emergence visualization
+- Golden highlights showing key iteration points
+
+Style: Computer science meets natural history - algorithm as genesis
+Mood: Wonder at simplicity generating complexity, computational universe
+Composition: Central rule radiating into natural complexity
+
+Teaching: Nature's complexity doesn't require complex mechanisms. Simple programs, iterated, generate all the richness we observe. The universe is computable.

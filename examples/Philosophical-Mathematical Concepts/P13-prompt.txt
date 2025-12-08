@@ -1,0 +1,48 @@
+Create a mathematical-aesthetic symbolic visualization titled "(√5+1)/2 - The Golden Ratio Formula"
+
+The exact mathematical expression of Φ and its profound symbolic significance.
+
+Visual Elements:
+- Central equation: Φ = (√5 + 1)/2 = 1.618033988749...
+- √5 component visualized: Pentagon with diagonal showing √5 relationship
+- Unit square with √5 diagonal construction
+- Geometric proof of formula using pentagon/pentagram
+- Infinite decimal expansion spiraling outward: 1.618033988749894848204586...
+- Visual breakdown:
+  - √5 ≈ 2.236... shown as geometric construction
+  - Adding 1 to create numerator
+  - Dividing by 2 to achieve balance
+
+SYMBOLIC SIGNIFICANCE:
+- √5 connects to pentagon (5-fold symmetry)
+- Life's spiral (5 petals, 5 fingers, pentagon flowers)
+- Irrational yet constructible (geometric perfection)
+- Self-referential: Φ = 1 + 1/Φ
+- Continued fraction showing infinite self-reference
+- Nature's optimization: Most efficient packing, growth pattern
+
+Mathematical Beauty:
+- Φ² = Φ + 1 (unique property)
+- 1/Φ = Φ - 1 (reciprocal magic)
+- Fibonacci limit: lim(F_{n+1}/F_n) = Φ
+- Golden angle: 360°/Φ² = 137.5°
+
+Visual Examples:
+- Nautilus shell spiral (Φ growth)
+- Galaxy arms (logarithmic Φ spiral)
+- Flower petal arrangements (Φ angle)
+- Human body proportions (Φ ratios)
+- Parthenon architecture (Φ rectangle)
+
+Color Palette:
+- Mathematical black precise lines
+- Sacred gold highlighting Φ
+- Geometric construction in blues
+- Irrational spiral in purples
+- Natural examples in earth tones
+
+Style: Mathematical precision meets aesthetic reverence
+Mood: Wonder at mathematical perfection, nature's signature
+Composition: Central formula radiating into geometric proof and natural applications
+
+Teaching: (√5+1)/2 is not arbitrary - it's the most irrational number, maximally resistant to rational approximation. Nature uses it for optimal efficiency.

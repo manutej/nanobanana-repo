@@ -1,0 +1,43 @@
+Create a quantum physics symbolic visualization titled "QUANTUM PARADOX TEACHER - Superposition & Observation"
+
+The fundamental paradoxes of quantum mechanics made visually accessible.
+
+Visual Elements:
+- Schrödinger's Cat superposition: Cat both alive and dead simultaneously
+- Wave-particle duality: Photon as both wave and particle
+- Double-slit experiment: Single electron interfering with itself
+- Quantum entanglement: Two particles connected across space
+- Observer effect: Measurement collapsing wave function
+- Heisenberg uncertainty: Position/momentum complementarity
+- Quantum tunneling: Particle passing through classically forbidden barrier
+
+SUPERPOSITION VISUALIZATION:
+- Overlapping translucent states
+- Wave function ψ showing probability amplitudes
+- Multiple realities existing simultaneously
+- Measurement apparatus causing collapse
+
+PARADOX ELEMENTS:
+- Before observation: Fuzzy superposed states
+- During measurement: Wave function collapse
+- After observation: Single definite state
+- Information loss in collapse (entropy increase)
+
+Symbolic Representations:
+- |ψ⟩ = α|0⟩ + β|1⟩ (superposition notation)
+- Probability density clouds
+- Bloch sphere showing qubit states
+- Feynman path integral (all paths taken)
+
+Color Palette:
+- Quantum blues and cyans (wave function)
+- Probability purples (uncertain states)
+- Collapse red (measurement/observation)
+- Entanglement gold threads
+- Uncertainty gray gradients
+
+Style: Quantum mechanics visualization meets philosophical puzzle
+Mood: Mysterious, counterintuitive, reality-challenging
+Composition: Superposition center, observation effects radiating
+
+Teaching: Quantum paradoxes - nature is fundamentally probabilistic. Observer and observed cannot be separated. Reality is participatory.
