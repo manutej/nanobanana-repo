@@ -1,0 +1,38 @@
+Crea una visualización simbólica computacional-filosófica titulada "EQUIVALENCIA COMPUTACIONAL MAESTRO - Complejidad Universal"
+
+Principio de Wolfram: Casi todos los procesos no triviales alcanzan sofisticación computacional equivalente.
+
+Elementos Visuales:
+- Cuadrícula de 6 sistemas computacionales mostrando complejidad equivalente:
+  1. Autómata celular Regla 110 (patrón blanco/negro evolucionando)
+  2. Cinta de máquina de Turing simple
+  3. Patrón natural (formación de cristal de copo de nieve)
+  4. Gráfico de precios de mercado económico
+  5. Capas de red neuronal activándose
+  6. Turbulencia de sistema meteorológico
+
+- HORIZONTE DE COMPLEJIDAD: Línea horizontal mostrando todos los sistemas alcanzando el mismo nivel
+- Flechas de emergencia: Reglas simples → Comportamiento complejo en cada sistema
+- Marcador de comportamiento Clase 4: Borde del caos donde ocurre computación universal
+- Símbolos de completitud de Turing (❈) marcando sistemas equivalentes
+- Visualización de irreductibilidad: No se puede atajar - debe ejecutarse la computación
+- Reglas iniciales simples mostradas para cada sistema (código mínimo)
+
+Capas Conceptuales (De Abajo Arriba):
+- Reglas elementales (deterministas, simples)
+- Evolución iterativa (pasos de tiempo, generaciones)
+- Complejidad emergente (patrones apareciendo)
+- Meseta de equivalencia computacional (todos igualmente sofisticados)
+
+Paleta de Colores:
+- Autómatas celulares blanco y negro (claridad computacional austera)
+- Espectro arcoíris diferenciando sistemas
+- Hilos dorados conectando puntos de complejidad equivalente
+- Gradientes fractales (autosimilitud a través de escalas)
+- Brillo azul de computación en horizonte de equivalencia
+
+Estilo: Visualización de datos científicos encuentra revelación filosófica
+Ánimo: Igualdad profunda - simplicidad alcanza sofisticación de la naturaleza
+Composición: Comparación en cuadrícula unificada por principio de equivalencia
+
+Enseñanza: Perspectiva de Wolfram - autómata celular, mercados, clima, cerebros: Todos alcanzan el mismo poder computacional. El universo es democrático en complejidad.

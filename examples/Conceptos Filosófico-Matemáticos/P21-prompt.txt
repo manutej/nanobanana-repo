@@ -1,0 +1,63 @@
+Crea una visualización simbólica matemática-estética titulada "1:1/Φ:Φ² - Tríada de Razón Áurea"
+
+La proporción fundamental 1 : 1/Φ : Φ² y su significado geométrico/estético.
+
+Elementos Visuales:
+- Tres segmentos en proporción áurea:
+  - Segmento 1: Longitud = 1 (unidad, línea base)
+  - Segmento 2: Longitud = 1/Φ = 0.618... (recíproco áureo)
+  - Segmento 3: Longitud = Φ² = 2.618... (cuadrado áureo)
+
+- Relación visual: 1/Φ + 1 = Φ y Φ + 1 = Φ²
+- Divisiones de rectángulo dorado mostrando esta proporción
+- Pentágono con 1:1/Φ:Φ² apareciendo en lados/diagonales
+- Pentagrama mostrando TODOS los ratios áureos
+
+DEMOSTRACIONES GEOMÉTRICAS:
+- Rectángulo: Ancho 1, Altura Φ (rectángulo dorado)
+- Dividiendo crea: Cuadrado (1×1) + Rectángulo (1/Φ × 1)
+- Rectángulo extendido: 1 + Φ = Φ² ancho
+- Espiral: Cada giro crece por factor Φ
+- Cámaras de nautilus: Progresión 1, Φ, Φ², Φ³...
+
+Propiedades Matemáticas:
+- Φ² = Φ + 1 = 2.618...
+- 1/Φ = Φ - 1 = 0.618...
+- Φ × 1/Φ = 1 (identidad recíproca)
+- 1 : 0.618 : 2.618 (tríada fundamental)
+- Media geométrica: √(1 × Φ²) = Φ
+
+Aplicaciones Estéticas:
+- Arquitectura clásica: Proporciones del Partenón (1:1/Φ:Φ²)
+- Arte renacentista: Proporciones de lienzo, divisiones de composición
+- Armonía musical: Divisiones de octava aproximando ratios Φ
+- Cuerpo humano: Ombligo divide altura en ratio ~1:1/Φ
+- Rostro: Ojo-a-barbilla vs. superior-a-ojos ≈ ratio Φ
+
+Ocurrencias Naturales:
+- Pétalos de flor: Conteos siguen Fibonacci (aproximando ratios Φ)
+- Ramas de árbol: Puntos de división en proporción 1/Φ
+- Galaxias espirales: Brazos en espaciamiento de ángulo Φ
+- Hélice de ADN: Ratio de giro relacionado con Φ
+- Sistema solar: Ratios de órbitas planetarias aproximando Φ
+
+Composición Visual:
+- Tres rectángulos anidados: Anchos 1, 1/Φ, Φ²
+- Espiral dorada conectando puntos de proporción
+- Pentágono/pentagrama mostrando los tres ratios
+- Pentagrama musical con intervalos basados en Φ
+- Forma humana con marcadores de proporción
+
+Paleta de Colores:
+- Segmento 1: Blanco puro (unidad)
+- Segmento 1/Φ: Oro sagrado (0.618...)
+- Segmento Φ²: Oro profundo (2.618...)
+- Líneas conectoras: Azul matemático
+- Fondo: Gradientes armónicos
+- Ejemplos estéticos: Tonos tierra naturales
+
+Estilo: Precisión matemática encuentra perfección estética
+Ánimo: Armonía, proporción, belleza a través de matemáticas
+Composición: Tres segmentos en relación áurea, radiando en aplicaciones
+
+Enseñanza: 1:1/Φ:Φ² es LA proporción fundamental - apareciendo en pentágono, rectángulo, espiral, naturaleza, arte y música. La belleza tiene estructura matemática.

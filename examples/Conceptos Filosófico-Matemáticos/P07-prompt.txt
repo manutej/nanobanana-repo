@@ -1,0 +1,38 @@
+Crea una visualización simbólica de ciencia de complejidad titulada "PROGRAMAS SIMPLES, COMPLEJIDAD NATURAL MAESTRO"
+
+Cómo los programas más simples generan la complejidad que vemos en la naturaleza.
+
+Elementos Visuales:
+- Código de programa mínimo (< 5 líneas) en la parte superior central
+- Explosión de complejidad radiando hacia afuera desde regla simple
+- Ejemplos de complejidad desde reglas simples:
+  - Autómata celular Regla 30 (aleatoriedad caótica desde regla determinista)
+  - Planeadores y osciladores del Juego de la Vida de Conway
+  - Patrones fractales (conjunto de Mandelbrot desde z → z² + c)
+  - Patrones de conchas (caracoles cono siguiendo reglas de crecimiento simples)
+  - Galaxias espirales desde ecuaciones gravitacionales
+  - Ramificación de copo de nieve desde reglas de red cristalina
+
+- IRREDUCTIBILIDAD: No se puede predecir resultado sin ejecutar computación completa
+- Camino de emergencia: Regla → Iteración → Patrón → Complejidad
+- Concepto de Universo Computacional: Naturaleza ejecuta programas simples
+- Auto-organización desde instrucciones mínimas
+
+Progresión Visual:
+- Centro: Regla simple única (ecuación o algoritmo)
+- Primer anillo: Iteraciones iniciales (pasos 1-10)
+- Anillo medio: Emergencia de patrón (pasos 100-1000)
+- Anillo exterior: Complejidad completa (patrones de aspecto natural)
+
+Paleta de Colores:
+- Blanco/negro austero para autómatas celulares
+- Colores naturales para ejemplos orgánicos (conchas, copos de nieve)
+- Azul matemático para fractales
+- Púrpuras cósmicos para visualización de emergencia
+- Destellos dorados mostrando puntos clave de iteración
+
+Estilo: Ciencias de computación encuentra historia natural - algoritmo como génesis
+Ánimo: Maravilla ante simplicidad generando complejidad, universo computacional
+Composición: Regla central radiando en complejidad natural
+
+Enseñanza: La complejidad de la naturaleza no requiere mecanismos complejos. Programas simples, iterados, generan toda la riqueza que observamos. El universo es computable.

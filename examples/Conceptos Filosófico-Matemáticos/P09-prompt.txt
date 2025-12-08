@@ -1,0 +1,43 @@
+Crea una visualización simbólica de física cuántica titulada "PARADOJA CUÁNTICA MAESTRO - Superposición y Observación"
+
+Las paradojas fundamentales de la mecánica cuántica hechas visualmente accesibles.
+
+Elementos Visuales:
+- Superposición del gato de Schrödinger: Gato tanto vivo como muerto simultáneamente
+- Dualidad onda-partícula: Fotón como tanto onda como partícula
+- Experimento de doble rendija: Electrón único interfiriendo consigo mismo
+- Entrelazamiento cuántico: Dos partículas conectadas a través del espacio
+- Efecto del observador: Medición colapsando función de onda
+- Incertidumbre de Heisenberg: Complementariedad posición/momento
+- Tunelamiento cuántico: Partícula pasando a través de barrera clásicamente prohibida
+
+VISUALIZACIÓN DE SUPERPOSICIÓN:
+- Estados translúcidos superpuestos
+- Función de onda ψ mostrando amplitudes de probabilidad
+- Múltiples realidades existiendo simultáneamente
+- Aparato de medición causando colapso
+
+ELEMENTOS DE PARADOJA:
+- Antes de observación: Estados superpuestos difusos
+- Durante medición: Colapso de función de onda
+- Después de observación: Estado único definido
+- Pérdida de información en colapso (aumento de entropía)
+
+Representaciones Simbólicas:
+- |ψ⟩ = α|0⟩ + β|1⟩ (notación de superposición)
+- Nubes de densidad de probabilidad
+- Esfera de Bloch mostrando estados de qubit
+- Integral de camino de Feynman (todos los caminos tomados)
+
+Paleta de Colores:
+- Azules y cianes cuánticos (función de onda)
+- Púrpuras de probabilidad (estados inciertos)
+- Rojo de colapso (medición/observación)
+- Hilos dorados de entrelazamiento
+- Gradientes grises de incertidumbre
+
+Estilo: Visualización de mecánica cuántica encuentra rompecabezas filosófico
+Ánimo: Misterioso, contraintuitivo, desafiante de realidad
+Composición: Centro de superposición, efectos de observación radiando
+
+Enseñanza: Paradojas cuánticas - la naturaleza es fundamentalmente probabilística. Observador y observado no pueden separarse. La realidad es participativa.

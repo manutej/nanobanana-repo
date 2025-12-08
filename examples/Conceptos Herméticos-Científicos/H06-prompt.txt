@@ -1,0 +1,33 @@
+Crea una visualización simbólica computacional-filosófica titulada "EQUIVALENCIA COMPUTACIONAL MAESTRO - Principio de Wolfram"
+
+Elementos Visuales:
+- Múltiples sistemas computacionales lado a lado mostrando complejidad equivalente:
+  - Autómata celular Regla 110 evolucionando
+  - Máquina de Turing simple computando
+  - Sistema natural (formación de copo de nieve, patrón de concha)
+  - Dinámica de mercado económico
+  - Aprendizaje de red neuronal
+  - Evolución de sistema meteorológico
+
+- Horizonte de complejidad unificado: todos los sistemas alcanzando el mismo poder computacional
+- Patrones de emergencia: reglas simples → comportamiento complejo a través de todos los dominios
+- Visualización de irreducibilidad: sin atajos - debes ejecutar el cómputo para ver el resultado
+- Comportamiento Clase 4: borde del caos donde sucede la computación
+- Símbolos de computación universal (marcadores de completitud Turing)
+
+Capas Conceptuales:
+- Inferior: Reglas elementales (simples, determinísticas)
+- Medio: Proceso evolutivo (iteración, emergencia)
+- Superior: Equivalencia computacional (todos igualmente complejos)
+
+Paleta de Colores:
+- Autómatas celulares en blanco y negro (dinámica stark basada en reglas)
+- Espectro arcoíris para diferentes sistemas computacionales
+- Hilos dorados conectando sistemas equivalentes
+- Gradientes de color fractal (auto-similitud a través de escalas)
+
+Estilo: Visualización de datos científica encuentra diagrama filosófico
+Ánimo: Igualdad profunda - reglas simples pueden igualar la complejidad de la naturaleza
+Composición: Comparación tipo cuadrícula mostrando sistemas diversos unificados por principio
+
+Concepto Maestro: Principio de Equivalencia Computacional de Wolfram - casi todos los procesos que no son obviamente simples tienen sofisticación equivalente. El universo computa, la mente computa, los mercados computan - todos alcanzando el mismo umbral computacional. Irreducibilidad significa: debes vivir el experimento.

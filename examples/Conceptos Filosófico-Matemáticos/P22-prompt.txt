@@ -1,0 +1,71 @@
+Crea una visualización simbólica matemática-filosófica titulada "LA LÍNEA NUMÉRICA ES MOVIMIENTO - Génesis Geométrica del Número"
+
+Línea numérica como proceso dinámico, no diagrama estático - número como movimiento a través del espacio.
+
+Elementos Visuales:
+- Línea numérica comenzando en origen (punto cero)
+- Cada número generado por MOVIMIENTO desde cero:
+  - 1: Un movimiento unitario a la derecha desde 0
+  - 2: Dos movimientos unitarios (sucesión 1+1)
+  - 3: Tres movimientos (contar como movimiento)
+  - Negativos: Movimiento a la izquierda desde 0
+
+- Movimiento como generador de número, no número habilitando movimiento
+- Construcción geométrica: Compás y regla creando números
+- Cada número es momento congelado en movimiento continuo
+
+DINÁMICAS DE MOVIMIENTO:
+- Cero: Quietud, potencialidad (sin movimiento aún)
+- Enteros positivos: Pasos hacia la derecha (movimiento discreto)
+- Enteros negativos: Pasos hacia la izquierda (dirección opuesta)
+- Números racionales: Pasos fraccionarios (movimiento subdividido)
+- Números irracionales: Movimientos inconmensurables (√2, π, e, Φ)
+- Línea continua: Movimientos potenciales infinitos
+
+Profundidad Filosófica:
+- Número no existe independientemente - ES el movimiento
+- Contar es sucesión temporal (movimiento a través del tiempo)
+- Construcción geométrica es movimiento espacial (movimiento de compás/regla)
+- Tiempo y número son co-emergentes desde movimiento
+- Línea numérica estática es abstracción de proceso dinámico
+
+Progresión Visual:
+1. Punto (cero) - sin movimiento, potencial puro
+2. Primer movimiento - creando unidad (1)
+3. Repetición - función sucesora (1,2,3...)
+4. Reversa - números negativos (-1,-2,-3...)
+5. Subdivisión - racionales (1/2, 1/3, 2/3...)
+6. Inconmensurable - irracionales (√2, π...)
+7. Límite - reales (movimiento continuo)
+
+Construcciones Geométricas:
+- Círculo unitario: Movimiento rotacional creando trigonometría
+- Espiral: Movimiento hacia afuera creando escala logarítmica
+- Duplicación de línea numérica: Cada número contiene línea entera (fractal)
+- Serie geométrica: Movimiento por ratio (Φ, 2, e)
+
+Metáforas Físicas:
+- Oscilación de péndulo: Movimiento periódico creando ritmo
+- Trayectoria de partícula: Movimiento trazando posiciones numéricas
+- Propagación de onda: Movimiento continuo a través de medio
+- Caminata cuántica: Movimiento probabilístico creando distribución
+
+Aspecto Temporal:
+- Contar requiere TIEMPO (enumeración sucesiva)
+- Línea numérica es TIEMPO espacializado
+- Derivada: Movimiento instantáneo (velocidad)
+- Integral: Movimiento acumulado (distancia)
+
+Paleta de Colores:
+- Cero: Punto blanco (quietud)
+- Dirección positiva: Colores cálidos (rojo→naranja→amarillo)
+- Dirección negativa: Colores fríos (azul→púrpura→índigo)
+- Rastros de movimiento: Efectos de desenfoque de movimiento
+- Irracionales: Patrones brillantes no repetitivos
+- Fondo: Gradiente espaciotemporal
+
+Estilo: Matemáticas dinámicas - número como proceso activo
+Ánimo: Movimiento como fundamento, número como movimiento congelado
+Composición: Línea numérica con vectores de movimiento visibles, rastros y proceso de generación
+
+Enseñanza: Línea numérica no es diagrama pasivo - ES movimiento. Cada número representa movimiento específico desde origen. Matemáticas es estudio de movimientos posibles, no entidades estáticas.

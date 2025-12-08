@@ -1,0 +1,48 @@
+Crea una visualización simbólica matemática-estética titulada "(√5+1)/2 - La Fórmula de la Razón Áurea"
+
+La expresión matemática exacta de Φ y su profundo significado simbólico.
+
+Elementos Visuales:
+- Ecuación central: Φ = (√5 + 1)/2 = 1.618033988749...
+- Componente √5 visualizado: Pentágono con diagonal mostrando relación √5
+- Cuadrado unitario con construcción diagonal √5
+- Prueba geométrica de fórmula usando pentágono/pentagrama
+- Expansión decimal infinita espiralando hacia afuera: 1.618033988749894848204586...
+- Desglose visual:
+  - √5 ≈ 2.236... mostrado como construcción geométrica
+  - Agregando 1 para crear numerador
+  - Dividiendo por 2 para lograr balance
+
+SIGNIFICADO SIMBÓLICO:
+- √5 conecta al pentágono (simetría de 5 pliegues)
+- Espiral de la vida (5 pétalos, 5 dedos, flores de pentágono)
+- Irracional pero construible (perfección geométrica)
+- Auto-referencial: Φ = 1 + 1/Φ
+- Fracción continua mostrando auto-referencia infinita
+- Optimización de la naturaleza: Patrón de empaquetamiento más eficiente, crecimiento
+
+Belleza Matemática:
+- Φ² = Φ + 1 (propiedad única)
+- 1/Φ = Φ - 1 (magia recíproca)
+- Límite de Fibonacci: lim(F_{n+1}/F_n) = Φ
+- Ángulo dorado: 360°/Φ² = 137.5°
+
+Ejemplos Visuales:
+- Espiral de concha nautilus (crecimiento Φ)
+- Brazos de galaxia (espiral logarítmica Φ)
+- Arreglos de pétalos de flor (ángulo Φ)
+- Proporciones del cuerpo humano (ratios Φ)
+- Arquitectura del Partenón (rectángulo Φ)
+
+Paleta de Colores:
+- Líneas precisas negras matemáticas
+- Oro sagrado resaltando Φ
+- Construcción geométrica en azules
+- Espiral irracional en púrpuras
+- Ejemplos naturales en tonos tierra
+
+Estilo: Precisión matemática encuentra reverencia estética
+Ánimo: Maravilla ante perfección matemática, firma de la naturaleza
+Composición: Fórmula central radiando en prueba geométrica y aplicaciones naturales
+
+Enseñanza: (√5+1)/2 no es arbitrario - es el número más irracional, máximamente resistente a aproximación racional. La naturaleza lo usa para eficiencia óptima.
