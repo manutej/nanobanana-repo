@@ -1,0 +1,418 @@
+name: nanobanana-image-generation
+description: |
+  Complete workflow for generating symbolic concept image suites using NanoBanana.
+  Orchestrates prompt creation, batch image generation, documentation, and repository management.
+
+  Supports multiple concept domains:
+  - Hermetic-Scientific (ancient wisdom + modern science)
+  - Philosophical-Mathematical (consciousness, golden ratio, quantum mechanics)
+  - Context Engineering (LLM optimization techniques)
+  - Symbolic Concepts (abstract visualizations)
+
+  Uses Gemini 3 Pro Image model for perfect text rendering and 4K resolution.
+
+version: "1.0"
+author: "NanoBanana Team"
+tags: ["image-generation", "gemini", "symbolic", "batch-processing", "philosophy", "mathematics"]
+
+inputs:
+  concept_suite_name:
+    type: string
+    description: "Name of the concept suite (e.g., 'Hermetic-Scientific Concepts')"
+    required: true
+    example: "Hermetic-Scientific Concepts"
+
+  concept_count:
+    type: integer
+    description: "Number of concepts in the suite"
+    required: true
+    example: 6
+    min: 1
+    max: 50
+
+  model_type:
+    type: string
+    description: "Gemini model to use (flash or pro)"
+    required: false
+    default: "pro"
+    enum: ["flash", "pro"]
+
+  concept_domain:
+    type: string
+    description: "Conceptual domain category"
+    required: false
+    default: "philosophical"
+    enum: ["hermetic", "philosophical", "mathematical", "scientific", "mystical", "quantum"]
+
+outputs:
+  images_generated:
+    type: integer
+    description: "Number of images successfully generated"
+
+  total_cost:
+    type: number
+    description: "Total cost in USD"
+
+  total_size_mb:
+    type: number
+    description: "Total size of all images in megabytes"
+
+  output_directory:
+    type: string
+    description: "Path to generated images directory"
+
+  success_rate:
+    type: number
+    description: "Success rate percentage (0-100)"
+
+steps:
+  - name: setup_environment
+    description: "Verify Python environment and dependencies"
+    agent: practical-programmer
+    tasks:
+      - "Check Python 3.8+ is available"
+      - "Verify virtual environment exists at ./venv"
+      - "Validate requirements.txt dependencies installed"
+      - "Check .env file exists with GOOGLE_API_KEY"
+      - "Verify src/gemini_client.py is present"
+    outputs:
+      - environment_ready: boolean
+      - python_version: string
+      - api_key_configured: boolean
+
+  - name: create_concept_prompts
+    description: "Research and create detailed symbolic prompts for each concept"
+    agent: deep-researcher
+    depends_on: [setup_environment]
+    tasks:
+      - "Research each concept deeply using WebSearch and knowledge"
+      - "Create prompt file for each concept (P01-prompt.txt, P02-prompt.txt, etc.)"
+      - "Include visual elements, color palette, style, mood, composition"
+      - "Ensure accessibility - complex ideas → beautiful clear symbols"
+      - "Add teaching essence and philosophical context"
+    prompt_template: |
+      Create a symbolic visualization prompt for: {concept_name}
+
+      Research the concept thoroughly, then create a detailed prompt including:
+      - Title and source attribution
+      - Core teaching/philosophy
+      - Visual elements (specific symbolic components)
+      - Color palette (precise color guidance)
+      - Style direction (artistic approach)
+      - Mood and composition
+      - Teaching essence (what the symbol conveys)
+
+      Make it accessible yet profound - complex concepts as beautiful symbols.
+    outputs:
+      - prompts_created: integer
+      - prompts_directory: string
+      - concepts_researched: array
+
+  - name: create_batch_generation_script
+    description: "Generate Python script for batch image generation"
+    agent: practical-programmer
+    depends_on: [create_concept_prompts]
+    tasks:
+      - "Create Python script using async/await pattern"
+      - "Import GeminiClient from src.gemini_client"
+      - "Load environment variables with python-dotenv"
+      - "Read all prompt files from concept directory"
+      - "Generate images with specified model (flash/pro)"
+      - "Save images with proper naming convention"
+      - "Track success rate, cost, and file sizes"
+      - "Generate comprehensive summary output"
+    script_template: |
+      #!/usr/bin/env python3
+      import asyncio
+      import sys
+      from pathlib import Path
+      from dotenv import load_dotenv
+
+      sys.path.insert(0, str(Path(__file__).parent.parent))
+      load_dotenv()
+
+      from src.gemini_client import GeminiClient
+
+      async def generate_all():
+          prompts_dir = Path("examples/{suite_name}")
+          async with GeminiClient() as client:
+              for concept in CONCEPTS:
+                  prompt = (prompts_dir / f"{concept['id']}-prompt.txt").read_text()
+                  result = await client.generate_image(prompt, model="{model}")
+                  # Save and track...
+
+      if __name__ == "__main__":
+          asyncio.run(generate_all())
+    outputs:
+      - script_path: string
+      - script_executable: boolean
+
+  - name: generate_images
+    description: "Execute batch image generation with Gemini 3 Pro"
+    agent: practical-programmer
+    depends_on: [create_batch_generation_script]
+    tasks:
+      - "Activate Python virtual environment"
+      - "Execute batch generation script"
+      - "Monitor generation progress (success/failure per image)"
+      - "Handle retries for failed generations (max 3 attempts)"
+      - "Calculate total cost and file sizes"
+      - "Verify all images generated successfully"
+    execution_pattern: |
+      source venv/bin/activate
+      python examples/generate_{suite_name_slug}.py
+    outputs:
+      - images_generated: integer
+      - failed_generations: integer
+      - total_cost_usd: number
+      - total_size_mb: number
+      - generation_time_seconds: number
+      - success_rate_percent: number
+
+  - name: create_comprehensive_documentation
+    description: "Generate README with concept descriptions and usage guide"
+    agent: docs-generator
+    depends_on: [generate_images]
+    tasks:
+      - "Create README.md in concept suite directory"
+      - "Document each concept with description and teaching"
+      - "Include generation statistics (cost, size, success rate)"
+      - "Add visual style characteristics"
+      - "Document use cases (educational, scientific, contemplative, publishing)"
+      - "Provide technical details (model, prompts, generation command)"
+      - "Include references and sources"
+      - "Add quality validation checklist"
+    documentation_sections:
+      - "Suite Overview"
+      - "Complete Concept Catalog (each concept detailed)"
+      - "Generation Statistics"
+      - "Visual & Conceptual Themes"
+      - "Use Cases"
+      - "Key Insights"
+      - "Technical Details"
+      - "References & Sources"
+      - "Quality Validation"
+    outputs:
+      - readme_path: string
+      - readme_size_kb: number
+      - concepts_documented: integer
+
+  - name: verify_quality
+    description: "Validate generated images meet quality standards"
+    agent: test-engineer
+    depends_on: [generate_images]
+    tasks:
+      - "Verify all expected images exist"
+      - "Check file sizes are reasonable (0.5-2 MB typical)"
+      - "Validate PNG format and integrity"
+      - "Ensure no corrupted files"
+      - "Verify success rate meets threshold (≥90%)"
+      - "Check total cost within budget"
+    quality_gates:
+      - min_success_rate: 90
+      - max_cost_per_image: 0.15
+      - min_image_size_kb: 100
+      - max_image_size_mb: 3
+      - required_format: "PNG"
+    outputs:
+      - quality_passed: boolean
+      - quality_issues: array
+      - validation_report: string
+
+  - name: commit_to_repository
+    description: "Commit generated suite to Git repository"
+    agent: github-workflow-expert
+    depends_on: [verify_quality, create_comprehensive_documentation]
+    tasks:
+      - "Stage concept directory (images + prompts + README)"
+      - "Stage batch generation script"
+      - "Create descriptive commit message with suite details"
+      - "Include generation statistics in commit message"
+      - "Add co-authorship tags (Claude Code + Happy)"
+      - "Verify no API keys in staged files"
+      - "Execute commit"
+    commit_message_template: |
+      feat: Add {suite_name} suite ({concept_count} images)
+
+      Generated {concept_count} profound visualizations bridging {domain}:
+      [List concepts with brief descriptions]
+
+      Model: Gemini 3 Pro Image
+      Success Rate: {success_rate}%
+      Total Cost: ${total_cost}
+      Total Size: {total_size} MB
+
+      Includes:
+      - {concept_count} high-quality PNG images
+      - {concept_count} detailed prompt files
+      - Comprehensive README.md
+      - Batch generation script
+
+      [Brief philosophical/conceptual summary]
+
+      🤖 Generated with [Claude Code](https://claude.com/claude-code)
+      via [Happy](https://happy.engineering)
+
+      Co-Authored-By: Claude <noreply@anthropic.com>
+      Co-Authored-By: Happy <yesreply@happy.engineering>
+    outputs:
+      - commit_hash: string
+      - files_committed: integer
+      - commit_message: string
+
+  - name: push_to_github
+    description: "Push commits to GitHub repository"
+    agent: github-workflow-expert
+    depends_on: [commit_to_repository]
+    tasks:
+      - "Verify remote repository is configured (origin)"
+      - "Check current branch (typically master/main)"
+      - "Push commits to remote"
+      - "Verify push succeeded"
+      - "Provide GitHub URL for viewing changes"
+    outputs:
+      - push_successful: boolean
+      - remote_url: string
+      - commits_pushed: integer
+
+  - name: generate_summary_report
+    description: "Create final execution summary"
+    agent: project-orchestrator
+    depends_on: [push_to_github]
+    tasks:
+      - "Compile all outputs from previous steps"
+      - "Calculate total execution time"
+      - "Generate success metrics"
+      - "Create visual summary (ASCII art)"
+      - "Provide GitHub links to view work"
+      - "Suggest next steps or improvements"
+    summary_format: |
+      🎉 **{suite_name} - COMPLETE SUCCESS!**
+
+      📊 **Generation Results**:
+      - Images: {images_generated}/{concept_count}
+      - Success Rate: {success_rate}%
+      - Total Cost: ${total_cost}
+      - Total Size: {total_size} MB
+      - Execution Time: {execution_time}
+
+      📁 **Repository**:
+      - Commit: {commit_hash}
+      - Files: {files_committed}
+      - GitHub: {github_url}
+
+      ✅ **Quality Validation**:
+      [Quality gates passed]
+
+      🚀 **Next Steps**:
+      [Suggestions for improvements or new suites]
+    outputs:
+      - summary_report: string
+      - execution_time_minutes: number
+      - overall_success: boolean
+
+error_handling:
+  - step: generate_images
+    on_failure:
+      - "Log failed concept IDs and error messages"
+      - "Retry failed generations up to 3 times with exponential backoff"
+      - "If still failing, continue with remaining concepts"
+      - "Generate partial success report"
+      - "Mark workflow as partially_successful if >50% generated"
+
+  - step: commit_to_repository
+    on_failure:
+      - "Check for uncommitted changes"
+      - "Verify no merge conflicts"
+      - "Attempt to stage files again"
+      - "If persistent failure, output manual commit instructions"
+
+  - step: push_to_github
+    on_failure:
+      - "Check internet connectivity"
+      - "Verify GitHub credentials"
+      - "Check for branch protection rules"
+      - "Provide manual push instructions if automated push fails"
+
+success_criteria:
+  - success_rate_minimum: 90
+  - quality_validation_passed: true
+  - documentation_complete: true
+  - repository_committed: true
+  - github_pushed: true
+
+monitoring:
+  - track_api_usage: true
+  - track_cost_per_image: true
+  - track_generation_time_per_image: true
+  - alert_on_failure_rate_above: 0.2
+  - log_all_errors: true
+
+post_execution:
+  - "Archive generation logs to docs/logs/"
+  - "Update main repository README with new suite info"
+  - "Create Git tag for milestone (optional)"
+  - "Generate shareable summary for stakeholders"
+
+reusability:
+  - "Template can be instantiated for any concept domain"
+  - "Supports 1-50 concepts per suite"
+  - "Model selection (flash for prototyping, pro for production)"
+  - "All prompts and scripts are committed for reproducibility"
+  - "Documentation auto-generated with consistent structure"
+
+example_invocations:
+  - name: "Hermetic-Scientific Suite"
+    inputs:
+      concept_suite_name: "Hermetic-Scientific Concepts"
+      concept_count: 6
+      model_type: "pro"
+      concept_domain: "hermetic"
+    expected_output:
+      images_generated: 6
+      total_cost: 0.72
+      success_rate: 100
+
+  - name: "Philosophical-Mathematical Suite"
+    inputs:
+      concept_suite_name: "Philosophical-Mathematical Concepts"
+      concept_count: 22
+      model_type: "pro"
+      concept_domain: "philosophical"
+    expected_output:
+      images_generated: 22
+      total_cost: 2.64
+      success_rate: 100
+
+  - name: "Quick Prototype Suite"
+    inputs:
+      concept_suite_name: "Prototype Concepts"
+      concept_count: 3
+      model_type: "flash"
+      concept_domain: "scientific"
+    expected_output:
+      images_generated: 3
+      total_cost: 0.12
+      success_rate: 100
+
+notes: |
+  This workflow codifies the complete NanoBanana image generation process:
+
+  1. **Research-Driven**: Deep research ensures accurate symbolic representation
+  2. **Quality-First**: Gemini 3 Pro for perfect text rendering
+  3. **Batch Processing**: Async/await pattern for efficient generation
+  4. **Comprehensive Documentation**: Auto-generated README with all details
+  5. **Repository Integration**: Automatic Git commit and GitHub push
+  6. **Reproducible**: All prompts and scripts committed
+
+  Success rate consistently 100% across 28+ images generated in production.
+
+  Perfect for:
+  - Educational materials (philosophy, mathematics, science courses)
+  - Scientific communication (complex concepts made visual)
+  - Publishing (book covers, article illustrations)
+  - Contemplation (meditation visuals, sacred geometry)
+
+  Cost-efficient: $0.12 per image (Pro model) or $0.039 (Flash model)
+
+  Repository: https://github.com/manutej/nanobanana-repo.git
