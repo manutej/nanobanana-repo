@@ -19,7 +19,9 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from src.gemini_client import GeminiClient
 
-# Data-driven configuration: all 20 concepts in one place
+# Data-driven configuration: all 20 concepts in one place.
+# NOTE: prompt_path and output_path are user-specific local paths.
+# Update them to match your local environment before running.
 CONCEPTS = {
     "C01": {
         "title": "Context Window Fundamentals",
