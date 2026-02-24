@@ -53,6 +53,14 @@ class DomainClassifier:
         ]
     }
 
+    def _score_domains(self, user_input: str) -> Dict[str, int]:
+        """Score all domains by counting keyword matches against user input."""
+        user_input_lower = user_input.lower()
+        return {
+            domain: sum(1 for kw in keywords if kw in user_input_lower)
+            for domain, keywords in self.DOMAIN_KEYWORDS.items()
+        }
+
     def classify(self, user_input: str) -> str:
         """
         Classify user input into a domain based on keyword matching.
@@ -69,24 +77,12 @@ class DomainClassifier:
             3. Return domain with most matches
             4. Default to "photography" if no matches
         """
-        user_input_lower = user_input.lower()
+        scores = self._score_domains(user_input)
 
-        # Count keyword matches per domain
-        scores = {}
-        for domain, keywords in self.DOMAIN_KEYWORDS.items():
-            score = sum(1 for keyword in keywords if keyword in user_input_lower)
-            scores[domain] = score
-
-        # Return domain with highest score
-        max_score = max(scores.values())
-
-        # If no keywords matched, default to photography
-        if max_score == 0:
+        if max(scores.values()) == 0:
             return "photography"
 
-        # Return domain with highest score
-        best_domain = max(scores, key=scores.get)
-        return best_domain
+        return max(scores, key=scores.get)
 
     def classify_with_confidence(self, user_input: str) -> tuple[str, float]:
         """
@@ -102,14 +98,7 @@ class DomainClassifier:
             domain, confidence = classifier.classify_with_confidence("AWS architecture diagram")
             # Returns: ("diagrams", 0.8)
         """
-        user_input_lower = user_input.lower()
-
-        # Count keyword matches per domain
-        scores = {}
-        for domain, keywords in self.DOMAIN_KEYWORDS.items():
-            score = sum(1 for keyword in keywords if keyword in user_input_lower)
-            scores[domain] = score
-
+        scores = self._score_domains(user_input)
         total_matches = sum(scores.values())
 
         if total_matches == 0:
@@ -134,14 +123,7 @@ class DomainClassifier:
             scores = classifier.get_all_scores("architecture diagram")
             # Returns: {"photography": 0, "diagrams": 2, "art": 0, "products": 0}
         """
-        user_input_lower = user_input.lower()
-
-        scores = {}
-        for domain, keywords in self.DOMAIN_KEYWORDS.items():
-            score = sum(1 for keyword in keywords if keyword in user_input_lower)
-            scores[domain] = score
-
-        return scores
+        return self._score_domains(user_input)
 
 
 # Convenience function for simple usage

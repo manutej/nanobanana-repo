@@ -71,7 +71,7 @@ def main():
         image_bytes = generate_banana_image(prompt, api_key)
 
         # Save to file
-        output_path = Path("/Users/manu/Documents/LUXOR/PROJECTS/nanobanana-repo/PROOF_IMAGE.png")
+        output_path = Path(__file__).parent.parent / "PROOF_IMAGE.png"
         output_path.write_bytes(image_bytes)
 
         print()
