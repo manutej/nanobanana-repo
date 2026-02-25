@@ -14,6 +14,7 @@ import os
 import json
 import httpx
 from datetime import datetime
+from pathlib import Path
 from typing import Dict, List, Any, Optional
 
 
@@ -461,7 +462,7 @@ def main():
     tester.run_all_tests()
 
     # Generate report
-    output_file = "/Users/manu/Documents/LUXOR/PROJECTS/nanobanana-repo/API-TEST-RESULTS.md"
+    output_file = str(Path(__file__).parent.parent / "API-TEST-RESULTS.md")
     tester.generate_report(output_file)
 
     print()

@@ -42,6 +42,18 @@ def run_async(coro):
         loop.close()
 
 
+def parse_prompt_request() -> tuple[Optional[Dict], Optional[tuple]]:
+    """Parse and validate a JSON request body containing a 'prompt' field.
+
+    Returns:
+        Tuple of (data dict, None) on success, or (None, error response tuple) on failure.
+    """
+    data = request.get_json()
+    if not data or "prompt" not in data:
+        return None, (jsonify({"error": "Missing 'prompt' in request"}), 400)
+    return data, None
+
+
 @app.route("/health", methods=["GET"])
 def health():
     """Health check endpoint for Cloud Run"""
@@ -81,10 +93,9 @@ def generate_image():
              -d '{"prompt": "sunset over mountains"}'
     """
     try:
-        # Parse request
-        data = request.get_json()
-        if not data or "prompt" not in data:
-            return jsonify({"error": "Missing 'prompt' in request"}), 400
+        data, error = parse_prompt_request()
+        if error:
+            return error
 
         user_prompt = data["prompt"]
         quality = data.get("quality", "detailed")
@@ -181,13 +192,12 @@ def classify():
         }
     """
     try:
-        data = request.get_json()
-        if not data or "prompt" not in data:
-            return jsonify({"error": "Missing 'prompt' in request"}), 400
+        data, error = parse_prompt_request()
+        if error:
+            return error
 
         user_prompt = data["prompt"]
 
-        # Classify
         domain, confidence = classifier.classify_with_confidence(user_prompt)
         scores = classifier.get_all_scores(user_prompt)
         subcategory = template_engine.suggest_subcategory(user_prompt, domain)
@@ -226,9 +236,9 @@ def enhance():
         }
     """
     try:
-        data = request.get_json()
-        if not data or "prompt" not in data:
-            return jsonify({"error": "Missing 'prompt' in request"}), 400
+        data, error = parse_prompt_request()
+        if error:
+            return error
 
         user_prompt = data["prompt"]
         domain = data.get("domain")
