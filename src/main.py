@@ -42,11 +42,11 @@ def run_async(coro):
         loop.close()
 
 
-def parse_prompt_request():
+def parse_prompt_request() -> tuple[Optional[Dict], Optional[tuple]]:
     """Parse and validate a JSON request body containing a 'prompt' field.
 
     Returns:
-        Tuple of (data dict, None) on success, or (None, error response) on failure.
+        Tuple of (data dict, None) on success, or (None, error response tuple) on failure.
     """
     data = request.get_json()
     if not data or "prompt" not in data:
