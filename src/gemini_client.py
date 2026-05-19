@@ -31,6 +31,9 @@ class GeminiClient:
         "pro": "gemini-3-pro-image-preview"  # Higher quality
     }
 
+    ASPECT_RATIOS = {"1:1", "16:9", "9:16", "4:3", "3:4"}
+    IMAGE_SIZES = {"1K", "2K", "4K"}
+
     def __init__(self, api_key: Optional[str] = None, timeout: float = 30.0):
         """
         Initialize Gemini client.
@@ -53,6 +56,8 @@ class GeminiClient:
         self,
         prompt: str,
         model: str = "flash",
+        aspect_ratio: Optional[str] = None,
+        image_size: Optional[str] = None,
         max_retries: int = 3
     ) -> Dict:
         """
@@ -88,18 +93,39 @@ class GeminiClient:
                 f"Invalid model: {model}. Must be one of {list(self.MODELS.keys())}"
             )
 
+        if aspect_ratio and aspect_ratio not in self.ASPECT_RATIOS:
+            raise ValueError(
+                f"Invalid aspect_ratio: {aspect_ratio}. "
+                f"Must be one of {sorted(self.ASPECT_RATIOS)}"
+            )
+
+        if image_size and image_size not in self.IMAGE_SIZES:
+            raise ValueError(
+                f"Invalid image_size: {image_size}. "
+                f"Must be one of {sorted(self.IMAGE_SIZES)}"
+            )
+
         model_id = self.MODELS[model]
         endpoint = f"{self.BASE_URL}/{model_id}:generateContent"
 
         # Request payload
         # CRITICAL: Explicitly request IMAGE response to avoid text-only responses
+        generation_config = {
+            "responseModalities": ["IMAGE", "TEXT"]  # Force image generation
+        }
+
+        if aspect_ratio or image_size:
+            generation_config["imageConfig"] = {}
+            if aspect_ratio:
+                generation_config["imageConfig"]["aspectRatio"] = aspect_ratio
+            if image_size:
+                generation_config["imageConfig"]["imageSize"] = image_size
+
         payload = {
             "contents": [{
                 "parts": [{"text": prompt}]
             }],
-            "generation_config": {
-                "responseModalities": ["IMAGE", "TEXT"]  # Force image generation
-            }
+            "generation_config": generation_config
         }
 
         # Retry loop with exponential backoff
@@ -142,7 +168,9 @@ class GeminiClient:
                     "image_data": image_bytes,
                     "mime_type": mime_type,
                     "model": model,
-                    "prompt": prompt
+                    "prompt": prompt,
+                    "aspect_ratio": aspect_ratio,
+                    "image_size": image_size
                 }
 
             except httpx.HTTPError as e:
