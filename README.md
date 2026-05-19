@@ -83,6 +83,13 @@ async for result in generate_batch_streaming(prompts, max_concurrent=5):
         print(f"✓ Generated {result['size_mb']:.2f} MB image")
 ```
 
+### Flask API (service mode)
+
+`src/main.py` now supports:
+- `POST /generate` with optional `aspect_ratio`, `image_size`, and `brand_profile`
+- `POST /generate/batch` with bounded `max_concurrent` and per-item status
+- `GET /brand-profiles` to inspect available brand constraints
+
 ---
 
 ## 🎨 Model Comparison

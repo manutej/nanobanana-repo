@@ -1,0 +1,20 @@
+{
+  "modern_tech": {
+    "colors": ["#0A84FF", "#30D158", "#F2F2F7"],
+    "style_rules": ["minimal composition", "clean typography", "high contrast readability"],
+    "forbidden_styles": ["vintage texture", "grunge effect"],
+    "tone": "modern, precise, innovative"
+  },
+  "luxury_editorial": {
+    "colors": ["#111111", "#D4AF37", "#F8F5F0"],
+    "style_rules": ["premium materials", "soft dramatic lighting", "elegant spacing"],
+    "forbidden_styles": ["neon palette", "cartoon aesthetic"],
+    "tone": "sophisticated, refined, aspirational"
+  },
+  "playful_consumer": {
+    "colors": ["#FF6B6B", "#4ECDC4", "#FFE66D"],
+    "style_rules": ["friendly forms", "bright palette", "approachable composition"],
+    "forbidden_styles": ["dark moody lighting", "overly technical schematic"],
+    "tone": "energetic, approachable, optimistic"
+  }
+}

@@ -12,6 +12,8 @@ Generate technical diagrams, abstract visualizations, and professional visual co
 - **💎 Pro Model Quality** - Gemini 3 Pro: Perfect text rendering, 4K resolution
 - **⚡ Fast & Efficient** - Async batch processing with smart concurrency control
 - **🎨 Dual Quality Tiers** - Flash ($0.039) for prototyping, Pro ($0.12) for production
+- **🏷️ Brand Profiles** - Apply named style/tone/color constraints to generated prompts
+- **📐 Output Controls** - Optional `aspect_ratio` and `image_size` controls in API mode
 - **📚 Pre-Built Libraries** - Context Engineering (10 diagrams) + Symbolic Concepts (8 visualizations)
 - **🔄 Meta-Prompting** - Iterative prompt refinement for perfect results
 - **🛡️ Secure by Default** - API keys in .env only, pre-commit hooks prevent exposure
