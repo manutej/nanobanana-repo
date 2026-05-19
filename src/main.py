@@ -15,7 +15,7 @@ from flask import Flask, request, jsonify, Response
 import asyncio
 import os
 import base64
-from datetime import datetime
+from datetime import datetime, UTC
 from typing import Any, Dict, List, Optional
 
 # Our simple components
@@ -145,7 +145,7 @@ def _format_image_response(
             "aspect_ratio": parsed["aspect_ratio"],
             "image_size": parsed["image_size"],
             "brand_profile": parsed["brand_profile"],
-            "timestamp": datetime.utcnow().isoformat()
+            "timestamp": datetime.now(UTC).isoformat()
         }
     }
 
@@ -170,7 +170,7 @@ def health():
     return jsonify({
         "status": "healthy",
         "service": "nanobanana-image-generation",
-        "timestamp": datetime.utcnow().isoformat()
+        "timestamp": datetime.now(UTC).isoformat()
     })
 
 
