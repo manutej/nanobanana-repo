@@ -221,8 +221,8 @@ def generate_image():
         response = run_async(_generate_single_async(parsed))
         return jsonify(response), 200
 
-    except ValueError as e:
-        return jsonify({"error": _safe_error_message(e)}), 400
+    except ValueError:
+        return jsonify({"error": "Invalid request parameters"}), 400
 
     except Exception as e:
         # Log error (in production, use proper logging)

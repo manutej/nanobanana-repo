@@ -86,6 +86,10 @@ def test_batch_endpoint_returns_per_item_status(client):
                 {
                     "prompt": "wireframe mockup",
                     "quality": "invalid-quality"
+                },
+                {
+                    "prompt": "mobile app dashboard mock",
+                    "aspect_ratio": "21:9"
                 }
             ]
         }
@@ -93,9 +97,9 @@ def test_batch_endpoint_returns_per_item_status(client):
 
     assert response.status_code == 200
     body = response.get_json()
-    assert body["total"] == 2
+    assert body["total"] == 3
     assert body["succeeded"] == 1
-    assert body["failed"] == 1
+    assert body["failed"] == 2
     assert body["results"][0]["status"] in {"success", "error"}
     assert body["results"][1]["status"] in {"success", "error"}
 
