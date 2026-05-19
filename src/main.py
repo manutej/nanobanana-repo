@@ -94,17 +94,7 @@ def _validate_and_parse_request(data: Dict[str, Any]) -> Dict[str, Any]:
 
 def _safe_error_message(err: Exception) -> str:
     if isinstance(err, ValueError):
-        message = str(err)
-        allowed_prefixes = (
-            "Missing",
-            "Invalid",
-            "Unsupported",
-            "Unknown",
-            "'prompt'",
-            "'brand_profile'"
-        )
-        if message.startswith(allowed_prefixes):
-            return message
+        return str(err)
     return "Request failed for this item"
 
 
