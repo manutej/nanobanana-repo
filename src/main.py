@@ -212,15 +212,23 @@ def generate_image():
         return jsonify(response), 200
 
     except ValueError as e:
-        return jsonify({"error": str(e)}), 400
+        error_message = str(e)
+        allowed_prefixes = (
+            "Missing",
+            "Invalid",
+            "Unsupported",
+            "Unknown",
+            "'prompt'",
+            "'brand_profile'"
+        )
+        if error_message.startswith(allowed_prefixes):
+            return jsonify({"error": error_message}), 400
+        return jsonify({"error": "Invalid request parameters"}), 400
 
     except Exception as e:
         # Log error (in production, use proper logging)
         print(f"ERROR: {e}")
-        return jsonify({
-            "error": "Internal server error",
-            "details": str(e)
-        }), 500
+        return jsonify({"error": "Internal server error"}), 500
 
 
 @app.route("/generate/batch", methods=["POST"])
@@ -303,7 +311,7 @@ def generate_batch():
 
     except Exception as e:
         print(f"ERROR: {e}")
-        return jsonify({"error": "Internal server error", "details": str(e)}), 500
+        return jsonify({"error": "Internal server error"}), 500
 
 
 @app.route("/classify", methods=["POST"])
@@ -343,7 +351,8 @@ def classify():
         }), 200
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        print(f"ERROR: {e}")
+        return jsonify({"error": "Internal server error"}), 500
 
 
 @app.route("/enhance", methods=["POST"])
@@ -406,7 +415,8 @@ def enhance():
         }), 200
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        print(f"ERROR: {e}")
+        return jsonify({"error": "Internal server error"}), 500
 
 
 @app.route("/brand-profiles", methods=["GET"])
