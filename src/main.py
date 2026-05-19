@@ -211,18 +211,7 @@ def generate_image():
         response = run_async(_generate_single_async(parsed))
         return jsonify(response), 200
 
-    except ValueError as e:
-        error_message = str(e)
-        allowed_prefixes = (
-            "Missing",
-            "Invalid",
-            "Unsupported",
-            "Unknown",
-            "'prompt'",
-            "'brand_profile'"
-        )
-        if error_message.startswith(allowed_prefixes):
-            return jsonify({"error": error_message}), 400
+    except ValueError:
         return jsonify({"error": "Invalid request parameters"}), 400
 
     except Exception as e:

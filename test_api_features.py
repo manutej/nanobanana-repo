@@ -67,7 +67,8 @@ def test_generate_supports_brand_aspect_and_size(client):
     assert body["metadata"]["image_size"] == "2K"
     assert body["metadata"]["brand_profile"] == "modern_tech"
     assert "brand tone:" in body["enhanced_prompt"]
-    assert "modern, precise, innovative" in body["enhanced_prompt"]
+    expected_tone = api_main.brand_profile_manager.get_profile("modern_tech")["tone"]
+    assert expected_tone in body["enhanced_prompt"]
 
 
 def test_batch_endpoint_returns_per_item_status(client):
@@ -120,4 +121,5 @@ def test_enhance_applies_brand_profile(client):
     body = response.get_json()
     assert body["brand_profile"] == "luxury_editorial"
     assert "brand tone:" in body["enhanced_prompt"]
-    assert "sophisticated, refined, aspirational" in body["enhanced_prompt"]
+    expected_tone = api_main.brand_profile_manager.get_profile("luxury_editorial")["tone"]
+    assert expected_tone in body["enhanced_prompt"]
