@@ -92,6 +92,22 @@ def _validate_and_parse_request(data: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
+def _safe_error_message(err: Exception) -> str:
+    if isinstance(err, ValueError):
+        message = str(err)
+        allowed_prefixes = (
+            "Missing",
+            "Invalid",
+            "Unsupported",
+            "Unknown",
+            "'prompt'",
+            "'brand_profile'"
+        )
+        if message.startswith(allowed_prefixes):
+            return message
+    return "Request failed for this item"
+
+
 def _build_enhanced_prompt(parsed: Dict[str, Any]) -> Dict[str, Any]:
     user_prompt = parsed["user_prompt"]
     quality = parsed["quality"]
@@ -281,7 +297,7 @@ def generate_batch():
                         return {
                             "status": "error",
                             "index": index,
-                            "error": str(err),
+                            "error": _safe_error_message(err),
                             "prompt": item.get("prompt")
                         }
 
