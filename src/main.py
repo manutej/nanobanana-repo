@@ -94,7 +94,11 @@ def _validate_and_parse_request(data: Dict[str, Any]) -> Dict[str, Any]:
 
 def _safe_error_message(err: Exception) -> str:
     if isinstance(err, ValueError):
-        return str(err)
+        message = str(err)
+        unsafe_markers = ("Traceback", "File \"", "/home/", "\\")
+        if any(marker in message for marker in unsafe_markers):
+            return "Invalid request parameters"
+        return message
     return "Request failed for this item"
 
 
@@ -217,8 +221,8 @@ def generate_image():
         response = run_async(_generate_single_async(parsed))
         return jsonify(response), 200
 
-    except ValueError:
-        return jsonify({"error": "Invalid request parameters"}), 400
+    except ValueError as e:
+        return jsonify({"error": _safe_error_message(e)}), 400
 
     except Exception as e:
         # Log error (in production, use proper logging)

@@ -6,11 +6,12 @@ import pytest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
 import main as api_main  # noqa: E402
+from gemini_client import GeminiClient as RealGeminiClient  # noqa: E402
 
 
 class FakeGeminiClient:
-    ASPECT_RATIOS = {"1:1", "16:9", "9:16", "4:3", "3:4"}
-    IMAGE_SIZES = {"1K", "2K", "4K"}
+    ASPECT_RATIOS = RealGeminiClient.ASPECT_RATIOS
+    IMAGE_SIZES = RealGeminiClient.IMAGE_SIZES
 
     async def __aenter__(self):
         return self

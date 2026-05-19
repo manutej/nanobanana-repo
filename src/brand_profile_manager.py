@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, Optional, List
 
 
 class BrandProfileManager:
@@ -14,7 +14,7 @@ class BrandProfileManager:
         with open(profiles_path, "r") as f:
             self.profiles: Dict = json.load(f)
 
-    def list_profiles(self) -> list[str]:
+    def list_profiles(self) -> List[str]:
         return sorted(self.profiles.keys())
 
     def get_profile(self, name: str) -> Dict:
